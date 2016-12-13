@@ -10,13 +10,13 @@
          <ClosedNode>/SpartanHome - Behavioral D:|Franco|Documents|UPB|ED|SpartanHome|SpartanHome.vhd/timer_ctrl - Timer - Behavioral</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>timer_ctrl - Timer - Behavioral (D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Timer.vhd)</SelectedItem>
+         <SelectedItem>SpartanHome_const.ucf (D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/SpartanHome_const.ucf)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >9</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000232000000020000000000000000000000000200000064ffffffff000000810000000300000002000002320000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>timer_ctrl - Timer - Behavioral (D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Timer.vhd)</CurrentItem>
+      <CurrentItem>SpartanHome_const.ucf (D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/SpartanHome_const.ucf)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -64,16 +64,17 @@
          <ClosedNode>/test_counter_0to23 - behavior D:|UPB|8vo Semestre|Electronica Digital|Xilinx|ProyectoFinal|SpartanHome|test_counter_0to23.vhd</ClosedNode>
          <ClosedNode>/test_counter_0to5 - behavior D:|UPB|8vo Semestre|Electronica Digital|Xilinx|ProyectoFinal|SpartanHome|test_counter_0to5.vhd</ClosedNode>
          <ClosedNode>/test_counter_0to9 - behavior D:|UPB|8vo Semestre|Electronica Digital|Xilinx|ProyectoFinal|SpartanHome|test_counter_0to9.vhd</ClosedNode>
+         <ClosedNode>/test_timer - behavior D:|UPB|8vo Semestre|Electronica Digital|Xilinx|ProyectoFinal|SpartanHome|test_timer.vhd</ClosedNode>
          <ClosedNode>/test_timer_adjuster - behavior D:|UPB|8vo Semestre|Electronica Digital|Xilinx|ProyectoFinal|SpartanHome|test_timer_adjuster.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>test_timer - behavior (D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/test_timer.vhd)</SelectedItem>
+         <SelectedItem>minutes_units - Counter_0to9 - Behavioral (D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Counter_0to9.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >12</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000232000000020000000000000000000000000200000064ffffffff000000810000000300000002000002320000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000020a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000020a0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>test_timer - behavior (D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/test_timer.vhd)</CurrentItem>
+      <CurrentItem>minutes_units - Counter_0to9 - Behavioral (D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Counter_0to9.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -122,14 +123,14 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000db000000010000000100000000000000000000000064ffffffff000000810000000000000001000000db0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000ef000000010000000100000000000000000000000064ffffffff000000810000000000000001000000ef0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
+   <CurrentView>Implementation</CurrentView>
 </Project>
