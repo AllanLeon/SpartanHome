@@ -79,17 +79,17 @@ begin
 	begin
 		if (H1>="0001") and (H2>="1001")	and (M1>="0000") and (M2>="0000")
 		 and (H1<="0010") and (H2<="0010") and (M1<="0101") and (M2<="1001") then	--lights @ 19:00-22:59
-			lights <= '0';
-			tmpLights <= '0';
-			alarm <= '1';
-			tmpAlarm <= '1';
-			music <= '0';
-			tmpAlarm <= '0';
-		elsif (H1="0000") and (H2="0110") and (M1="0011") and (M2="0000") then	--alarm @ 06:30
 			lights <= '1';
 			tmpLights <= '1';
 			alarm <= '0';
 			tmpAlarm <= '0';
+			music <= '0';
+			tmpAlarm <= '0';
+		elsif (H1="0000") and (H2="0110") and (M1="0011") and (M2="0000") then	--alarm @ 06:30
+			lights <= '0';
+			tmpLights <= '0';
+			alarm <= '1';
+			tmpAlarm <= '1';
 			music <= '0';
 			tmpMusic <= '0';
 		elsif (H1>="0001") and (H2>="1001") and (M1>="0000") and (M2>="0000")
@@ -608,13 +608,53 @@ begin
 				nx_status <= r1;
 
 			-- None
-			when bar1_row =>		----- INICIO código $5F ESCRIBE EL CARACTER "_"
+			when bar1_row =>		----- INICIO código $5F ESCRIBE EL CARACTER "_" (1)
 				RS <='1'; RW<='0';
 				DB <="0101";
 				nx_status <= bar1_col;
 			when bar1_col =>
 				RS <='1'; RW<='0';
-				DB <="1111";		----- FIN código $5F ESCRIBE EL CARACTER "_"
+				DB <="1111";		----- FIN código $5F ESCRIBE EL CARACTER "_" (1)
+				nx_status <= bar2_row;
+			when bar2_row =>		----- INICIO código $5F ESCRIBE EL CARACTER "_" (2)
+				RS <='1'; RW<='0';
+				DB <="0101";
+				nx_status <= bar2_col;
+			when bar2_col =>
+				RS <='1'; RW<='0';
+				DB <="1111";		----- FIN código $5F ESCRIBE EL CARACTER "_" (2)
+				nx_status <= bar3_row;
+			when bar3_row =>		----- INICIO código $5F ESCRIBE EL CARACTER "_" (3)
+				RS <='1'; RW<='0';
+				DB <="0101";
+				nx_status <= bar3_col;
+			when bar3_col =>
+				RS <='1'; RW<='0';
+				DB <="1111";		----- FIN código $5F ESCRIBE EL CARACTER "_" (3)
+				nx_status <= bar4_row;
+			when bar4_row =>		----- INICIO código $5F ESCRIBE EL CARACTER "_" (4)
+				RS <='1'; RW<='0';
+				DB <="0101";
+				nx_status <= bar4_col;
+			when bar4_col =>
+				RS <='1'; RW<='0';
+				DB <="1111";		----- FIN código $5F ESCRIBE EL CARACTER "_" (4)
+				nx_status <= bar5_row;
+			when bar5_row =>		----- INICIO código $5F ESCRIBE EL CARACTER "_" (5)
+				RS <='1'; RW<='0';
+				DB <="0101";
+				nx_status <= bar5_col;
+			when bar5_col =>
+				RS <='1'; RW<='0';
+				DB <="1111";		----- FIN código $5F ESCRIBE EL CARACTER "_" (5)
+				nx_status <= bar6_row;
+			when bar6_row =>		----- INICIO código $5F ESCRIBE EL CARACTER "_" (6)
+				RS <='1'; RW<='0';
+				DB <="0101";
+				nx_status <= bar6_col;
+			when bar6_col =>
+				RS <='1'; RW<='0';
+				DB <="1111";		----- FIN código $5F ESCRIBE EL CARACTER "_" (6)
 				nx_status <= r1;
 
 			when r1 =>
@@ -629,4 +669,3 @@ begin
 	end process COMB_machine;
 
 end Behavioral;
-
