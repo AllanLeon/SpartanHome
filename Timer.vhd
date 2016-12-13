@@ -128,10 +128,10 @@ begin
 	divider_1hz: FrequencyDivider_1hz port map (clk, clk_1hz);
 	divider_5000hz: FrequencyDivider_5000hz port map (clk, clk_5000hz);
 	seconds_units: Counter_0to9 port map (clk_1hz, rst, '1', s0_tmp);
-	seconds_tens: Counter_0to5 port map (clk_5000hz, rst, s1_pulse, s1_tmp);
-	minutes_units: Counter_0to9 port map (clk_5000hz, rst, m0_pulse, m0_tmp);
-	minutes_tens: Counter_0to5 port map (clk_5000hz, rst, m1_pulse, m1_tmp);
-	hours: Counter_0to23 port map (clk_5000hz, rst, h_pulse, h1, h0);
+	seconds_tens: Counter_0to5 port map (s1_pulse, rst, '1', s1_tmp);
+	minutes_units: Counter_0to9 port map (m0_pulse, rst, '1', m0_tmp);
+	minutes_tens: Counter_0to5 port map (m1_pulse, rst, '1', m1_tmp);
+	hours: Counter_0to23 port map (h_pulse, rst, '1', h1, h0);
 	adjuster: TimerAdjuster port map (clk_5000hz, rst, M, H, s1_tmp, m1_tmp, h_pulse, m0_pulse);
 	
 	m0 <= m0_tmp;

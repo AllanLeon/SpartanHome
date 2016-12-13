@@ -104,6 +104,10 @@ BEGIN
 		H <= '0';
 		wait for clk_period/2 * 200;
 		H <= '1';
+		wait for clk_period/2 * 10;
+		H <= '0';
+		wait for clk_period/2 * 8;
+		H <= '1';
 		wait for clk_period/2 * 4;
 	end process;
  

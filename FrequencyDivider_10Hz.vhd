@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    11:09:20 12/13/2016 
+-- Create Date:    16:10:31 12/13/2016 
 -- Design Name: 
--- Module Name:    FrequencyDivider_1hz - Behavioral 
+-- Module Name:    FrequencyDivider_10Hz - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,14 +29,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity FrequencyDivider_1hz is
+entity FrequencyDivider_10Hz is
     Port ( clk : in  STD_LOGIC;
            clkout : out  STD_LOGIC);
-end FrequencyDivider_1hz;
+end FrequencyDivider_10Hz;
 
-architecture Behavioral of FrequencyDivider_1hz is
+architecture Behavioral of FrequencyDivider_10Hz is
 
-	constant max: integer := 50000000 / 1;
+	constant max: integer := 50000000 / 10;
    constant half: integer := max / 2;
    SIGNAL count: integer range 0 to max;
 	
@@ -57,6 +57,6 @@ begin
 		 end if;
 	  end if;
 	end process;
-	
+
 end Behavioral;
 

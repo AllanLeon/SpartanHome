@@ -75,12 +75,15 @@ component Timer is
 end component;
 
 signal h1, h0, m1, m0: STD_LOGIC_VECTOR (3 downto 0);
+signal m_pulse, h_pulse, clk_10hz: STD_LOGIC;
 
 begin
-
+	
+	divider_button: FrequencyDivider_10Hz port map (clk, clk_10hz);
+	filter_minutes: NoiseFilter port map (M, clk_10hz, rst, m_pulse);
+	filter_hours: NoiseFilter port map (H, clk_10hz, rst, h_pulse);
 	lcd_display: CtrlLogic port map (h1, h0, m1, m0, clk, rst, E, RS, RW, SF_CE0, DB, alarm, lights, music);
-	timer_ctrl: Timer port map (clk, rst, M, H, h1, h0, m1, m0);
-
+	timer_ctrl: Timer port map (clk, rst, m_pulse, h_pulse, h1, h0, m1, m0);
 
 end Behavioral;
 
