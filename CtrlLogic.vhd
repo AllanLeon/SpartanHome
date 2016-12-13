@@ -49,7 +49,8 @@ architecture Behavioral of CtrlLogic is
 						 l1_row,l1_col,u2_row,u2_col,c2_row,c2_col,e1_row,e1_col,s1_row,s1_col,
 						 a1_row,a1_col,l2_row,l2_col,a2_row,a2_col,r1_row,r1_col,m1_row,m1_col,a3_row,a3_col,
 						 m2_row,m2_col,u3_row,u3_col,s2_row,s2_col,i2_row,i2_col,c3_row,c3_col,a4_row,a4_col,
-						 bar1_row,bar1_col,r1,r2);
+						 bar1_row,bar1_col,bar2_row,bar2_col,bar3_row,bar3_col,bar4_row,bar4_col,
+						 bar5_row,bar5_col,bar6_row,bar6_col,r1,r2);
 	signal pr_status,nx_status:states;
 	signal tmpLights, tmpAlarm, tmpMusic : std_logic;
 	signal selHr1_row, selHr1_col, selHr2_row, selHr2_col : std_logic_vector(3 downto 0) := "0000";

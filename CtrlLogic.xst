@@ -1,0 +1,5 @@
+set -tmpdir "D:/Franco/Documents/UPB/ED/SpartanHome/xst/projnav.tmp"
+set -xsthdpdir "D:/Franco/Documents/UPB/ED/SpartanHome/xst"
+elaborate
+-ifn CtrlLogic.prj
+-ifmt mixed

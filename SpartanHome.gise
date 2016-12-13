@@ -23,6 +23,9 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CtrlLogic.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="CtrlLogic.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="CtrlLogic.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FrequencyDivider_1hz.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="FrequencyDivider_1hz.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="FrequencyDivider_1hz.xst"/>
@@ -278,7 +281,7 @@
     </transform>
     <transform xil_pn:end_ts="1481643884" xil_pn:in_ck="-7770648111746313361" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1481643883">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
