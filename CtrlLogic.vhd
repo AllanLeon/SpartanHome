@@ -78,23 +78,21 @@ begin
 	
 	verifier : process(H1, H2, M1, M2)
 	begin
-		if (H1>="0001") and (H2>="1001")	and (M1>="0000") and (M2>="0000")
-		 and (H1<="0010") and (H2<="0010") and (M1<="0101") and (M2<="1001") then	--lights @ 19:00-22:59
+		if (H1="0001" and H2="1001") or (H1="0010" and H2<="0010") then	--lights @ 19:00-22:59
 			lights <= '1';
 			tmpLights <= '1';
 			alarm <= '0';
 			tmpAlarm <= '0';
 			music <= '0';
 			tmpAlarm <= '0';
-		elsif (H1="0000") and (H2="0110") and (M1="0011") and (M2="0000") then	--alarm @ 06:30
+		elsif H1="0000" and H2="0110" and M1="0011" and M2="0000" then	--alarm @ 06:30
 			lights <= '0';
 			tmpLights <= '0';
 			alarm <= '1';
 			tmpAlarm <= '1';
 			music <= '0';
 			tmpMusic <= '0';
-		elsif (H1>="0001") and (H2>="1001") and (M1>="0000") and (M2>="0000")
-		 and (H1<="0010") and (H2<="0010") and (M1<="0101") and (M2<="1001") then	--music @ 12:30-13:29
+		elsif (H1="0001" and H2="0010" and M1>="0011") or (H1="0001" and H2="0011" and M1<="0010") then	--music @ 12:30-13:29
 			lights <= '0';
 			tmpLights <= '0';
 			alarm <= '0';
