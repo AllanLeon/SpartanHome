@@ -1,0 +1,5 @@
+set -tmpdir "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/xst/projnav.tmp"
+set -xsthdpdir "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/xst"
+elaborate
+-ifn FrequencyDivider_1hz.prj
+-ifmt mixed

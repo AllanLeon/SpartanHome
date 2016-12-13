@@ -1,0 +1,955 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: SpartanHome.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SpartanHome.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SpartanHome"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : SpartanHome
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/FrequencyDivider_1hz.vhd" in Library work.
+Architecture behavioral of Entity frequencydivider_1hz is up to date.
+Compiling vhdl file "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/FrequencyDivider_5000hz.vhd" in Library work.
+Architecture behavioral of Entity frequencydivider_5000hz is up to date.
+Compiling vhdl file "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Counter_0to9.vhd" in Library work.
+Architecture behavioral of Entity counter_0to9 is up to date.
+Compiling vhdl file "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Counter_0to5.vhd" in Library work.
+Architecture behavioral of Entity counter_0to5 is up to date.
+Compiling vhdl file "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Counter_0to23.vhd" in Library work.
+Architecture behavioral of Entity counter_0to23 is up to date.
+Compiling vhdl file "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/TimerAdjuster.vhd" in Library work.
+Entity <timeradjuster> compiled.
+Entity <timeradjuster> (Architecture <behavioral>) compiled.
+Compiling vhdl file "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/CtrlLogic.vhd" in Library work.
+Architecture behavioral of Entity ctrllogic is up to date.
+Compiling vhdl file "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Timer.vhd" in Library work.
+Architecture behavioral of Entity timer is up to date.
+Compiling vhdl file "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/SpartanHome.vhd" in Library work.
+Architecture behavioral of Entity spartanhome is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <SpartanHome> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <CtrlLogic> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Timer> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FrequencyDivider_1hz> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FrequencyDivider_5000hz> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Counter_0to9> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Counter_0to5> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Counter_0to23> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TimerAdjuster> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <SpartanHome> in library <work> (Architecture <behavioral>).
+Entity <SpartanHome> analyzed. Unit <SpartanHome> generated.
+
+Analyzing Entity <CtrlLogic> in library <work> (Architecture <behavioral>).
+Entity <CtrlLogic> analyzed. Unit <CtrlLogic> generated.
+
+Analyzing Entity <Timer> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Timer.vhd" line 107: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <f1_s>
+WARNING:Xst:819 - "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Timer.vhd" line 115: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <f1_m>
+WARNING:Xst:819 - "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Timer.vhd" line 123: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <s0_tmp>, <f1_s>, <m0_tmp>, <f1_m>
+Entity <Timer> analyzed. Unit <Timer> generated.
+
+Analyzing Entity <FrequencyDivider_1hz> in library <work> (Architecture <behavioral>).
+Entity <FrequencyDivider_1hz> analyzed. Unit <FrequencyDivider_1hz> generated.
+
+Analyzing Entity <FrequencyDivider_5000hz> in library <work> (Architecture <behavioral>).
+Entity <FrequencyDivider_5000hz> analyzed. Unit <FrequencyDivider_5000hz> generated.
+
+Analyzing Entity <Counter_0to9> in library <work> (Architecture <behavioral>).
+Entity <Counter_0to9> analyzed. Unit <Counter_0to9> generated.
+
+Analyzing Entity <Counter_0to5> in library <work> (Architecture <behavioral>).
+Entity <Counter_0to5> analyzed. Unit <Counter_0to5> generated.
+
+Analyzing Entity <Counter_0to23> in library <work> (Architecture <behavioral>).
+Entity <Counter_0to23> analyzed. Unit <Counter_0to23> generated.
+
+Analyzing Entity <TimerAdjuster> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/TimerAdjuster.vhd" line 94: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <s_counter>, <f1_s>, <m_counter>, <f1_m>
+Entity <TimerAdjuster> analyzed. Unit <TimerAdjuster> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <CtrlLogic>.
+    Related source file is "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/CtrlLogic.vhd".
+INFO:Xst:1799 - State a1_col is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State a1_row is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State l2_row is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State l2_col is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State a2_row is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State a2_col is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State r1_row is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State r1_col is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State m1_row is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State m1_col is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State a3_row is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State a3_col is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State m2_col is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State m2_row is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State u3_row is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State u3_col is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State s2_row is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State s2_col is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State i2_row is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State i2_col is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State c3_row is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State c3_col is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State a4_row is never reached in FSM <pr_status>.
+INFO:Xst:1799 - State a4_col is never reached in FSM <pr_status>.
+    Found finite state machine <FSM_0> for signal <pr_status>.
+    -----------------------------------------------------------------------
+    | States             | 66                                             |
+    | Transitions        | 67                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 66                                             |
+    | Clock              | E                         (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | fi1a                                           |
+    | Power Up State     | fi1a                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16x8-bit ROM for signal <M2$rom0000>.
+    Found 16x8-bit ROM for signal <H2$rom0000>.
+    Found 1-bit register for signal <E>.
+    Found 17-bit register for signal <count>.
+    Found 17-bit adder for signal <count$addsub0000> created at line 66.
+    Found 17-bit comparator less for signal <count$cmp_lt0000> created at line 65.
+    Found 17-bit comparator less for signal <E$cmp_lt0000> created at line 70.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 ROM(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <CtrlLogic> synthesized.
+
+
+Synthesizing Unit <FrequencyDivider_1hz>.
+    Related source file is "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/FrequencyDivider_1hz.vhd".
+    Found 1-bit register for signal <clkout>.
+    Found 20-bit comparator less for signal <clkout$cmp_lt0000> created at line 53.
+    Found 20-bit up counter for signal <count>.
+    Found 20-bit comparator less for signal <count$cmp_lt0000> created at line 48.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <FrequencyDivider_1hz> synthesized.
+
+
+Synthesizing Unit <FrequencyDivider_5000hz>.
+    Related source file is "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/FrequencyDivider_5000hz.vhd".
+    Found 1-bit register for signal <clkout>.
+    Found 14-bit comparator less for signal <clkout$cmp_lt0000> created at line 53.
+    Found 14-bit up counter for signal <count>.
+    Found 14-bit comparator less for signal <count$cmp_lt0000> created at line 48.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <FrequencyDivider_5000hz> synthesized.
+
+
+Synthesizing Unit <Counter_0to9>.
+    Related source file is "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Counter_0to9.vhd".
+    Found finite state machine <FSM_1> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 20                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | q0                                             |
+    | Power Up State     | q0                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <Counter_0to9> synthesized.
+
+
+Synthesizing Unit <Counter_0to5>.
+    Related source file is "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Counter_0to5.vhd".
+    Found finite state machine <FSM_2> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | q0                                             |
+    | Power Up State     | q0                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <Counter_0to5> synthesized.
+
+
+Synthesizing Unit <Counter_0to23>.
+    Related source file is "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Counter_0to23.vhd".
+    Found finite state machine <FSM_3> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 24                                             |
+    | Transitions        | 48                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | q0                                             |
+    | Power Up State     | q0                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <Counter_0to23> synthesized.
+
+
+Synthesizing Unit <TimerAdjuster>.
+    Related source file is "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/TimerAdjuster.vhd".
+    Found 4-bit register for signal <f1_m>.
+    Found 4-bit register for signal <f1_s>.
+    Found 1-bit register for signal <tmp_hc>.
+    Found 1-bit xor2 for signal <tmp_hc$xor0000> created at line 76.
+    Found 1-bit xor2 for signal <tmp_hc$xor0001> created at line 76.
+    Found 1-bit xor2 for signal <tmp_hc$xor0002> created at line 76.
+    Found 1-bit xor2 for signal <tmp_hc$xor0003> created at line 76.
+    Found 1-bit register for signal <tmp_hp>.
+    Found 1-bit register for signal <tmp_mc>.
+    Found 1-bit xor2 for signal <tmp_mc$xor0000> created at line 64.
+    Found 1-bit xor2 for signal <tmp_mc$xor0001> created at line 64.
+    Found 1-bit xor2 for signal <tmp_mc$xor0002> created at line 64.
+    Found 1-bit xor2 for signal <tmp_mc$xor0003> created at line 64.
+    Found 1-bit register for signal <tmp_mp>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <TimerAdjuster> synthesized.
+
+
+Synthesizing Unit <Timer>.
+    Related source file is "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/Timer.vhd".
+    Found 4-bit register for signal <f1_m>.
+    Found 4-bit register for signal <f1_s>.
+    Found 1-bit xor2 for signal <m1_pulse$xor0000> created at line 116.
+    Found 1-bit xor2 for signal <m1_pulse$xor0001> created at line 116.
+    Found 1-bit xor2 for signal <m1_pulse$xor0002> created at line 116.
+    Found 1-bit xor2 for signal <m1_pulse$xor0003> created at line 116.
+    Found 1-bit xor2 for signal <s1_pulse$xor0000> created at line 108.
+    Found 1-bit xor2 for signal <s1_pulse$xor0001> created at line 108.
+    Found 1-bit xor2 for signal <s1_pulse$xor0002> created at line 108.
+    Found 1-bit xor2 for signal <s1_pulse$xor0003> created at line 108.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <Timer> synthesized.
+
+
+Synthesizing Unit <SpartanHome>.
+    Related source file is "D:/UPB/8vo Semestre/Electronica Digital/Xilinx/ProyectoFinal/SpartanHome/SpartanHome.vhd".
+Unit <SpartanHome> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x8-bit ROM                                          : 2
+# Adders/Subtractors                                   : 1
+ 17-bit adder                                          : 1
+# Counters                                             : 2
+ 14-bit up counter                                     : 1
+ 20-bit up counter                                     : 1
+# Registers                                            : 12
+ 1-bit register                                        : 7
+ 17-bit register                                       : 1
+ 4-bit register                                        : 4
+# Comparators                                          : 6
+ 14-bit comparator less                                : 2
+ 17-bit comparator less                                : 2
+ 20-bit comparator less                                : 2
+# Xors                                                 : 16
+ 1-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <timer_ctrl/hours/current_state/FSM> on signal <current_state[1:5]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ q0    | 00000
+ q1    | 00001
+ q2    | 00010
+ q3    | 00011
+ q4    | 00100
+ q5    | 00101
+ q6    | 00110
+ q7    | 00111
+ q8    | 01000
+ q9    | 01001
+ q10   | 01010
+ q11   | 01011
+ q12   | 01100
+ q13   | 01101
+ q14   | 01110
+ q15   | 01111
+ q16   | 10000
+ q17   | 10001
+ q18   | 10010
+ q19   | 10011
+ q20   | 10100
+ q21   | 10101
+ q22   | 10110
+ q23   | 10111
+-------------------
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <timer_ctrl/seconds_tens/current_state/FSM> on signal <current_state[1:3]> with user encoding.
+Optimizing FSM <timer_ctrl/minutes_tens/current_state/FSM> on signal <current_state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ q0    | 000
+ q1    | 001
+ q2    | 010
+ q3    | 011
+ q4    | 100
+ q5    | 101
+-------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <timer_ctrl/seconds_units/current_state/FSM> on signal <current_state[1:4]> with user encoding.
+Optimizing FSM <timer_ctrl/minutes_units/current_state/FSM> on signal <current_state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ q0    | 0000
+ q1    | 0001
+ q2    | 0010
+ q3    | 0011
+ q4    | 0100
+ q5    | 0101
+ q6    | 0110
+ q7    | 0111
+ q8    | 1000
+ q9    | 1001
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <lcd_display/pr_status/FSM> on signal <pr_status[1:66]> with one-hot encoding.
+----------------------------------------------------------------------------------
+ State      | Encoding
+----------------------------------------------------------------------------------
+ fi1a       | 000000000000000000000000000000000000000000000000000000000000000001
+ fi1b       | 000000000000000000000000000000000000000000000000000000000000000010
+ fi2a       | 000000000000000000000000000000000000000000000000000000000000000100
+ fi2b       | 000000000000000000000000000000000000000000000000000000000000001000
+ fi3a       | 000000000000000000000000000000000000000000000000000000000000010000
+ fi3b       | 000000000000000000000000000000000000000000000000000000000000100000
+ bor1       | 000000000000000000000000000000000000000000000000000000000001000000
+ bor2       | 000000000000000000000000000000000000000000000000000000000010000000
+ cont1      | 000000000000000000000000000000000000000000000000000000000100000000
+ cont2      | 000000000000000000000000000000000000000000000000000000001000000000
+ mod1       | 000000000000000000000000000000000000000000000000000000010000000000
+ mod2       | 000000000000000000000000000000000000000000000000000000100000000000
+ sp1_row    | 000000000000000000000000000000000000000000000000000001000000000000
+ sp1_col    | 000000000000000000000000000000000000000000000000000010000000000000
+ sp2_row    | 000000000000000000000000000000000000000000000000000100000000000000
+ sp2_col    | 000000000000000000000000000000000000000000000000001000000000000000
+ sp3_row    | 000000000000000000000000000000000000000000000000010000000000000000
+ sp3_col    | 000000000000000000000000000000000000000000000000100000000000000000
+ sp4_row    | 000000000000000000000000000000000000000000000001000000000000000000
+ sp4_col    | 000000000000000000000000000000000000000000000010000000000000000000
+ sp5_row    | 000000000000000000000000000000000000000000000100000000000000000000
+ sp5_col    | 000000000000000000000000000000000000000000001000000000000000000000
+ hour1_row  | 000000000000000000000000000000000000000000010000000000000000000000
+ hour1_col  | 000000000000000000000000000000000000000000100000000000000000000000
+ hour2_row  | 000000000000000000000000000000000000000001000000000000000000000000
+ hour2_col  | 000000000000000000000000000000000000000010000000000000000000000000
+ colon1_row | 000000000000000000000000000000000000000100000000000000000000000000
+ colon1_col | 000000000000000000000000000000000000001000000000000000000000000000
+ min1_row   | 000000000000000000000000000000000000010000000000000000000000000000
+ min1_col   | 000000000000000000000000000000000000100000000000000000000000000000
+ min2_row   | 000000000000000000000000000000000001000000000000000000000000000000
+ min2_col   | 000000000000000000000000000000000010000000000000000000000000000000
+ lcdl2_row  | 000000000000000000000000000000000100000000000000000000000000000000
+ lcdl2_col  | 000000000000000000000000000000001000000000000000000000000000000000
+ f1_row     | 000000000000000000000000000000010000000000000000000000000000000000
+ f1_col     | 000000000000000000000000000000100000000000000000000000000000000000
+ u1_row     | 000000000000000000000000000001000000000000000000000000000000000000
+ u1_col     | 000000000000000000000000000010000000000000000000000000000000000000
+ n1_row     | 000000000000000000000000000100000000000000000000000000000000000000
+ n1_col     | 000000000000000000000000001000000000000000000000000000000000000000
+ c1_row     | 000000000000000000000000010000000000000000000000000000000000000000
+ c1_col     | 000000000000000000000000100000000000000000000000000000000000000000
+ i1_row     | 000000000000000000000001000000000000000000000000000000000000000000
+ i1_col     | 000000000000000000000010000000000000000000000000000000000000000000
+ o1_row     | 000000000000000000000100000000000000000000000000000000000000000000
+ o1_col     | 000000000000000000001000000000000000000000000000000000000000000000
+ n2_row     | 000000000000000000010000000000000000000000000000000000000000000000
+ n2_col     | 000000000000000000100000000000000000000000000000000000000000000000
+ colon2_row | 000000000000000001000000000000000000000000000000000000000000000000
+ colon2_col | 000000000000000010000000000000000000000000000000000000000000000000
+ sp6_row    | 000000000000000100000000000000000000000000000000000000000000000000
+ sp6_col    | 000000000000001000000000000000000000000000000000000000000000000000
+ l1_row     | 000000000000010000000000000000000000000000000000000000000000000000
+ l1_col     | 000000000001000000000000000000000000000000000000000000000000000000
+ u2_row     | 000000000010000000000000000000000000000000000000000000000000000000
+ u2_col     | 000000000100000000000000000000000000000000000000000000000000000000
+ c2_row     | 000000001000000000000000000000000000000000000000000000000000000000
+ c2_col     | 000000010000000000000000000000000000000000000000000000000000000000
+ e1_row     | 000000100000000000000000000000000000000000000000000000000000000000
+ e1_col     | 000001000000000000000000000000000000000000000000000000000000000000
+ s1_row     | 000010000000000000000000000000000000000000000000000000000000000000
+ s1_col     | 000100000000000000000000000000000000000000000000000000000000000000
+ a1_row     | unreached
+ a1_col     | unreached
+ l2_row     | unreached
+ l2_col     | unreached
+ a2_row     | unreached
+ a2_col     | unreached
+ r1_row     | unreached
+ r1_col     | unreached
+ m1_row     | unreached
+ m1_col     | unreached
+ a3_row     | unreached
+ a3_col     | unreached
+ m2_row     | unreached
+ m2_col     | unreached
+ u3_row     | unreached
+ u3_col     | unreached
+ s2_row     | unreached
+ s2_col     | unreached
+ i2_row     | unreached
+ i2_col     | unreached
+ c3_row     | unreached
+ c3_col     | unreached
+ a4_row     | unreached
+ a4_col     | unreached
+ bar1_row   | 000000000000100000000000000000000000000000000000000000000000000000
+ bar1_col   | 010000000000000000000000000000000000000000000000000000000000000000
+ r1         | 001000000000000000000000000000000000000000000000000000000000000000
+ r2         | 100000000000000000000000000000000000000000000000000000000000000000
+----------------------------------------------------------------------------------
+WARNING:Xst:1293 - FF/Latch <f1_s_3> has a constant value of 0 in block <adjuster>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <f1_m_3> has a constant value of 0 in block <adjuster>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 4
+# ROMs                                                 : 2
+ 16x8-bit ROM                                          : 2
+# Adders/Subtractors                                   : 1
+ 17-bit adder                                          : 1
+# Counters                                             : 2
+ 14-bit up counter                                     : 1
+ 20-bit up counter                                     : 1
+# Registers                                            : 40
+ Flip-Flops                                            : 40
+# Comparators                                          : 6
+ 14-bit comparator less                                : 2
+ 17-bit comparator less                                : 2
+ 20-bit comparator less                                : 2
+# Xors                                                 : 16
+ 1-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <f1_m_3> in Unit <TimerAdjuster> is equivalent to the following FF/Latch, which will be removed : <f1_s_3> 
+WARNING:Xst:1293 - FF/Latch <f1_m_3> has a constant value of 0 in block <TimerAdjuster>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <SpartanHome> ...
+
+Optimizing unit <CtrlLogic> ...
+
+Optimizing unit <TimerAdjuster> ...
+
+Optimizing unit <Timer> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SpartanHome, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 157
+ Flip-Flops                                            : 157
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : SpartanHome.ngr
+Top Level Output File Name         : SpartanHome
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 364
+#      GND                         : 1
+#      INV                         : 15
+#      LUT1                        : 57
+#      LUT2                        : 44
+#      LUT3                        : 29
+#      LUT4                        : 66
+#      MUXCY                       : 97
+#      MUXF5                       : 3
+#      VCC                         : 1
+#      XORCY                       : 51
+# FlipFlops/Latches                : 157
+#      FD                          : 17
+#      FDC                         : 35
+#      FDCE                        : 2
+#      FDR                         : 100
+#      FDRS                        : 2
+#      FDS                         : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 3
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      129  out of   4656     2%  
+ Number of Slice Flip Flops:            157  out of   9312     1%  
+ Number of 4 input LUTs:                211  out of   9312     2%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                | Load  |
+-----------------------------------+------------------------------------------------------+-------+
+lcd_display/E1                     | BUFG                                                 | 66    |
+clk                                | BUFGP                                                | 54    |
+timer_ctrl/divider_5000hz/clkout1  | BUFG                                                 | 33    |
+timer_ctrl/divider_1hz/clkout      | NONE(timer_ctrl/seconds_units/current_state_FSM_FFd4)| 4     |
+-----------------------------------+------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 37    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.521ns (Maximum Frequency: 105.031MHz)
+   Minimum input arrival time before clock: 3.414ns
+   Maximum output required time after clock: 9.595ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'lcd_display/E1'
+  Clock period: 2.309ns (frequency: 433.088MHz)
+  Total number of paths / destination ports: 67 / 67
+-------------------------------------------------------------------------
+Delay:               2.309ns (Levels of Logic = 1)
+  Source:            lcd_display/pr_status_FSM_FFd15 (FF)
+  Destination:       lcd_display/pr_status_FSM_FFd13 (FF)
+  Source Clock:      lcd_display/E1 rising
+  Destination Clock: lcd_display/E1 rising
+
+  Data Path: lcd_display/pr_status_FSM_FFd15 to lcd_display/pr_status_FSM_FFd13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.591   0.706  lcd_display/pr_status_FSM_FFd15 (lcd_display/pr_status_FSM_FFd15)
+     LUT2:I0->O            1   0.704   0.000  lcd_display/pr_status_FSM_FFd13-In1 (lcd_display/pr_status_FSM_FFd13-In)
+     FDR:D                     0.308          lcd_display/pr_status_FSM_FFd13
+    ----------------------------------------
+    Total                      2.309ns (1.603ns logic, 0.706ns route)
+                                       (69.4% logic, 30.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.521ns (frequency: 105.031MHz)
+  Total number of paths / destination ports: 1497 / 88
+-------------------------------------------------------------------------
+Delay:               9.521ns (Levels of Logic = 17)
+  Source:            lcd_display/count_1 (FF)
+  Destination:       lcd_display/E (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: lcd_display/count_1 to lcd_display/E
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.591   0.595  lcd_display/count_1 (lcd_display/count_1)
+     LUT1:I0->O            1   0.704   0.000  lcd_display/Madd_count_addsub0000_cy<1>_rt (lcd_display/Madd_count_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  lcd_display/Madd_count_addsub0000_cy<1> (lcd_display/Madd_count_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  lcd_display/Madd_count_addsub0000_cy<2> (lcd_display/Madd_count_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  lcd_display/Madd_count_addsub0000_cy<3> (lcd_display/Madd_count_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  lcd_display/Madd_count_addsub0000_cy<4> (lcd_display/Madd_count_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  lcd_display/Madd_count_addsub0000_cy<5> (lcd_display/Madd_count_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  lcd_display/Madd_count_addsub0000_cy<6> (lcd_display/Madd_count_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  lcd_display/Madd_count_addsub0000_cy<7> (lcd_display/Madd_count_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  lcd_display/Madd_count_addsub0000_cy<8> (lcd_display/Madd_count_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  lcd_display/Madd_count_addsub0000_cy<9> (lcd_display/Madd_count_addsub0000_cy<9>)
+     XORCY:CI->O           2   0.804   0.622  lcd_display/Madd_count_addsub0000_xor<10> (lcd_display/count_addsub0000<10>)
+     LUT2:I0->O            1   0.704   0.424  lcd_display/Mcompar_E_cmp_lt0000_lut<5>_SW0 (N15)
+     LUT4:I3->O            1   0.704   0.000  lcd_display/Mcompar_E_cmp_lt0000_lut<5> (lcd_display/Mcompar_E_cmp_lt0000_lut<5>)
+     MUXCY:S->O            1   0.464   0.000  lcd_display/Mcompar_E_cmp_lt0000_cy<5> (lcd_display/Mcompar_E_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  lcd_display/Mcompar_E_cmp_lt0000_cy<6> (lcd_display/Mcompar_E_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.459   0.420  lcd_display/Mcompar_E_cmp_lt0000_cy<7> (lcd_display/Mcompar_E_cmp_lt0000_cy<7>)
+     INV:I->O              1   0.704   0.420  lcd_display/Mcompar_E_cmp_lt0000_cy<7>_inv_INV_0 (lcd_display/E_cmp_lt0000)
+     FDR:R                     0.911          lcd_display/E
+    ----------------------------------------
+    Total                      9.521ns (7.040ns logic, 2.481ns route)
+                                       (73.9% logic, 26.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'timer_ctrl/divider_5000hz/clkout1'
+  Clock period: 4.980ns (frequency: 200.803MHz)
+  Total number of paths / destination ports: 118 / 28
+-------------------------------------------------------------------------
+Delay:               4.980ns (Levels of Logic = 3)
+  Source:            timer_ctrl/minutes_units/current_state_FSM_FFd2 (FF)
+  Destination:       timer_ctrl/minutes_tens/current_state_FSM_FFd1 (FF)
+  Source Clock:      timer_ctrl/divider_5000hz/clkout1 rising
+  Destination Clock: timer_ctrl/divider_5000hz/clkout1 rising
+
+  Data Path: timer_ctrl/minutes_units/current_state_FSM_FFd2 to timer_ctrl/minutes_tens/current_state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             10   0.591   0.961  timer_ctrl/minutes_units/current_state_FSM_FFd2 (timer_ctrl/minutes_units/current_state_FSM_FFd2)
+     LUT4:I1->O            2   0.704   0.526  timer_ctrl/m1_pulse_and000017 (timer_ctrl/m1_pulse_and000017)
+     LUT2:I1->O            2   0.704   0.482  timer_ctrl/m1_pulse_and000018 (timer_ctrl/m1_pulse)
+     LUT4:I2->O            1   0.704   0.000  timer_ctrl/minutes_tens/current_state_FSM_FFd1-In1 (timer_ctrl/minutes_tens/current_state_FSM_FFd1-In)
+     FDC:D                     0.308          timer_ctrl/minutes_tens/current_state_FSM_FFd1
+    ----------------------------------------
+    Total                      4.980ns (3.011ns logic, 1.969ns route)
+                                       (60.5% logic, 39.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'timer_ctrl/divider_1hz/clkout'
+  Clock period: 2.692ns (frequency: 371.471MHz)
+  Total number of paths / destination ports: 11 / 5
+-------------------------------------------------------------------------
+Delay:               2.692ns (Levels of Logic = 1)
+  Source:            timer_ctrl/seconds_units/current_state_FSM_FFd4 (FF)
+  Destination:       timer_ctrl/seconds_units/current_state_FSM_FFd4 (FF)
+  Source Clock:      timer_ctrl/divider_1hz/clkout rising
+  Destination Clock: timer_ctrl/divider_1hz/clkout rising
+
+  Data Path: timer_ctrl/seconds_units/current_state_FSM_FFd4 to timer_ctrl/seconds_units/current_state_FSM_FFd4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.591   0.669  timer_ctrl/seconds_units/current_state_FSM_FFd4 (timer_ctrl/seconds_units/current_state_FSM_FFd4)
+     INV:I->O              1   0.704   0.420  timer_ctrl/seconds_units/current_state_FSM_FFd4-In1_INV_0 (timer_ctrl/seconds_units/current_state_FSM_FFd4-In)
+     FDC:D                     0.308          timer_ctrl/seconds_units/current_state_FSM_FFd4
+    ----------------------------------------
+    Total                      2.692ns (1.603ns logic, 1.089ns route)
+                                       (59.5% logic, 40.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'lcd_display/E1'
+  Total number of paths / destination ports: 66 / 66
+-------------------------------------------------------------------------
+Offset:              3.414ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       lcd_display/pr_status_FSM_FFd15 (FF)
+  Destination Clock: lcd_display/E1 rising
+
+  Data Path: rst to lcd_display/pr_status_FSM_FFd15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           103   1.218   1.285  rst_IBUF (rst_IBUF)
+     FDR:R                     0.911          lcd_display/pr_status_FSM_FFd13
+    ----------------------------------------
+    Total                      3.414ns (2.129ns logic, 1.285ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'timer_ctrl/divider_5000hz/clkout1'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.946ns (Levels of Logic = 1)
+  Source:            H (PAD)
+  Destination:       timer_ctrl/adjuster/tmp_hp (FF)
+  Destination Clock: timer_ctrl/divider_5000hz/clkout1 rising
+
+  Data Path: H to timer_ctrl/adjuster/tmp_hp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  H_IBUF (H_IBUF)
+     FDC:D                     0.308          timer_ctrl/adjuster/tmp_hp
+    ----------------------------------------
+    Total                      1.946ns (1.526ns logic, 0.420ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.310ns (Levels of Logic = 1)
+  Source:            lcd_display/E (FF)
+  Destination:       E (PAD)
+  Source Clock:      clk rising
+
+  Data Path: lcd_display/E to E
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  lcd_display/E (lcd_display/E1)
+     OBUF:I->O                 3.272          E_OBUF (E)
+    ----------------------------------------
+    Total                      4.310ns (3.863ns logic, 0.447ns route)
+                                       (89.6% logic, 10.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'lcd_display/E1'
+  Total number of paths / destination ports: 161 / 5
+-------------------------------------------------------------------------
+Offset:              9.560ns (Levels of Logic = 5)
+  Source:            lcd_display/pr_status_FSM_FFd18 (FF)
+  Destination:       RS (PAD)
+  Source Clock:      lcd_display/E1 rising
+
+  Data Path: lcd_display/pr_status_FSM_FFd18 to RS
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.622  lcd_display/pr_status_FSM_FFd18 (lcd_display/pr_status_FSM_FFd18)
+     LUT4:I0->O            1   0.704   0.595  lcd_display/DB<1>110 (lcd_display/DB<1>110)
+     LUT4:I0->O            2   0.704   0.622  lcd_display/DB<1>117 (lcd_display/N2)
+     LUT4:I0->O            2   0.704   0.622  lcd_display/DB<0>2 (lcd_display/N1)
+     LUT3:I0->O            1   0.704   0.420  lcd_display/RS48 (RS_OBUF)
+     OBUF:I->O                 3.272          RS_OBUF (RS)
+    ----------------------------------------
+    Total                      9.560ns (6.679ns logic, 2.881ns route)
+                                       (69.9% logic, 30.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'timer_ctrl/divider_5000hz/clkout1'
+  Total number of paths / destination ports: 102 / 5
+-------------------------------------------------------------------------
+Offset:              9.595ns (Levels of Logic = 5)
+  Source:            timer_ctrl/hours/current_state_FSM_FFd3 (FF)
+  Destination:       DB<0> (PAD)
+  Source Clock:      timer_ctrl/divider_5000hz/clkout1 rising
+
+  Data Path: timer_ctrl/hours/current_state_FSM_FFd3 to DB<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              9   0.591   0.995  timer_ctrl/hours/current_state_FSM_FFd3 (timer_ctrl/hours/current_state_FSM_FFd3)
+     LUT4:I0->O            4   0.704   0.591  timer_ctrl/hours/current_state_FSM_Out31 (h1<0>)
+     LUT4:I3->O            1   0.704   0.455  lcd_display/DB<0>70 (lcd_display/DB<0>70)
+     LUT3:I2->O            1   0.704   0.455  lcd_display/DB<0>78 (lcd_display/DB<0>78)
+     LUT4:I2->O            1   0.704   0.420  lcd_display/DB<0>114 (DB_0_OBUF)
+     OBUF:I->O                 3.272          DB_0_OBUF (DB<0>)
+    ----------------------------------------
+    Total                      9.595ns (6.679ns logic, 2.916ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.73 secs
+ 
+--> 
+
+Total memory usage is 268328 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :   26 (   0 filtered)
+

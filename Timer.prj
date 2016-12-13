@@ -1,0 +1,7 @@
+vhdl work "TimerAdjuster.vhd"
+vhdl work "FrequencyDivider_5000hz.vhd"
+vhdl work "FrequencyDivider_1hz.vhd"
+vhdl work "Counter_0to9.vhd"
+vhdl work "Counter_0to5.vhd"
+vhdl work "Counter_0to23.vhd"
+vhdl work "Timer.vhd"
