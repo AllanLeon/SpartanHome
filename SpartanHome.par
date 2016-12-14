@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-ALLAN-PC::  Tue Dec 13 11:54:38 2016
+ENVY14BEATSED::  Wed Dec 14 10:42:02 2016
 
 par -w -intstyle ise -ol high -t 1 SpartanHome_map.ncd SpartanHome.ncd
 SpartanHome.pcf 
@@ -37,8 +37,8 @@ Design Summary Report:
    Number of External Bidir IOBs                  0
 
 
-   Number of BUFGMUXs                        3 out of 24     12%
-   Number of Slices                        163 out of 4656    3%
+   Number of BUFGMUXs                        2 out of 24      8%
+   Number of Slices                        272 out of 4656    5%
       Number of SLICEMs                      0 out of 2328    0%
 
 
@@ -57,37 +57,37 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:871ddb93) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:c8dae81e) REAL time: 1 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:871ddb93) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:c8dae81e) REAL time: 1 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:871ddb93) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:c8dae81e) REAL time: 1 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:faa5092a) REAL time: 2 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:efd90386) REAL time: 3 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:faa5092a) REAL time: 2 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:efd90386) REAL time: 3 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:faa5092a) REAL time: 2 secs 
+Phase 6.36  Local Placement Optimization (Checksum:efd90386) REAL time: 3 secs 
 
 Phase 7.8  Global Placement
-.....................
-...........
-Phase 7.8  Global Placement (Checksum:944bb94d) REAL time: 2 secs 
+....................................
+....
+Phase 7.8  Global Placement (Checksum:90897f1a) REAL time: 3 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:944bb94d) REAL time: 2 secs 
+Phase 8.5  Local Placement Optimization (Checksum:90897f1a) REAL time: 3 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:f9fe08dd) REAL time: 3 secs 
+Phase 9.18  Placement Optimization (Checksum:23a4cf9f) REAL time: 3 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:f9fe08dd) REAL time: 3 secs 
+Phase 10.5  Local Placement Optimization (Checksum:23a4cf9f) REAL time: 3 secs 
 
 Total REAL time to Placer completion: 3 secs 
 Total CPU  time to Placer completion: 3 secs 
@@ -98,26 +98,26 @@ Writing design to file SpartanHome.ncd
 Starting Router
 
 
-Phase  1  : 850 unrouted;      REAL time: 6 secs 
+Phase  1  : 1376 unrouted;      REAL time: 7 secs 
 
-Phase  2  : 737 unrouted;      REAL time: 6 secs 
+Phase  2  : 1190 unrouted;      REAL time: 8 secs 
 
-Phase  3  : 82 unrouted;      REAL time: 6 secs 
+Phase  3  : 170 unrouted;      REAL time: 8 secs 
 
-Phase  4  : 82 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Phase  4  : 170 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
 Updating file: SpartanHome.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
 
-Total REAL time to Router completion: 7 secs 
-Total CPU time to Router completion: 7 secs 
+Total REAL time to Router completion: 9 secs 
+Total CPU time to Router completion: 9 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -135,15 +135,31 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X1Y11| No   |   30 |  0.036     |  0.162      |
+|           clk_BUFGP | BUFGMUX_X1Y11| No   |   73 |  0.052     |  0.179      |
 +---------------------+--------------+------+------+------------+-------------+
-|timer_ctrl/divider_5 |              |      |      |            |             |
-|        000hz/clkout |  BUFGMUX_X1Y0| No   |   26 |  0.061     |  0.179      |
+|       lcd_display/E | BUFGMUX_X1Y10| No   |   53 |  0.041     |  0.158      |
 +---------------------+--------------+------+------+------------+-------------+
-|       lcd_display/E | BUFGMUX_X1Y10| No   |   36 |  0.069     |  0.187      |
+|divider_button/clkou |              |      |      |            |             |
+|                   t |         Local|      |    2 |  0.235     |  2.109      |
++---------------------+--------------+------+------+------------+-------------+
+| timer_ctrl/m1_pulse |         Local|      |    3 |  0.167     |  2.095      |
++---------------------+--------------+------+------+------------+-------------+
+| timer_ctrl/s1_pulse |         Local|      |    3 |  0.000     |  1.441      |
++---------------------+--------------+------+------+------------+-------------+
+|  timer_ctrl/h_pulse |         Local|      |    4 |  0.018     |  1.510      |
 +---------------------+--------------+------+------+------------+-------------+
 |timer_ctrl/divider_1 |              |      |      |            |             |
-|           hz/clkout |         Local|      |    3 |  0.000     |  1.478      |
+|           hz/clkout |         Local|      |    3 |  0.008     |  1.493      |
++---------------------+--------------+------+------+------------+-------------+
+| timer_ctrl/m0_pulse |         Local|      |    3 |  0.003     |  1.515      |
++---------------------+--------------+------+------+------------+-------------+
+| divider_beep/clkout |         Local|      |    1 |  0.000     |  1.269      |
++---------------------+--------------+------+------+------------+-------------+
+|timer_ctrl/divider_5 |              |      |      |            |             |
+|        000hz/clkout |         Local|      |   12 |  0.243     |  2.139      |
++---------------------+--------------+------+------+------------+-------------+
+|lcd_display/tmpMusic |              |      |      |            |             |
+|            _not0001 |         Local|      |    1 |  0.000     |  0.853      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -163,8 +179,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH | SETUP       |    12.427ns|     7.573ns|       0|           0
-   50%                                      | HOLD        |     1.599ns|            |       0|           0
+  NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH | SETUP       |    11.533ns|     8.467ns|       0|           0
+   50%                                      | HOLD        |     1.607ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -175,10 +191,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 7 secs 
-Total CPU time to PAR completion: 7 secs 
+Total REAL time to PAR completion: 9 secs 
+Total CPU time to PAR completion: 9 secs 
 
-Peak Memory Usage:  279 MB
+Peak Memory Usage:  312 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

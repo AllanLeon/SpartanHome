@@ -91,7 +91,7 @@ begin
 		end if;
 	end process;
 	
-	process (clk, rst) begin
+	process (clk, rst, s_counter, f1_s, m_counter, f1_m) begin
 		vector_change(clk, rst, s_counter, f1_s);
 		vector_change(clk, rst, m_counter, f1_m);
 	end process;

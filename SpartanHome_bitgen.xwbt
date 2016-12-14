@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=D:\UPB\8vo Semestre\Electronica Digital\Xilinx\ProyectoFinal\SpartanHome\SpartanHome.ncd
-OUTFILE=D:\UPB\8vo Semestre\Electronica Digital\Xilinx\ProyectoFinal\SpartanHome\SpartanHome.bit
+INFILE=D:\Franco\Documents\UPB\ED\SpartanHome\SpartanHome.ncd
+OUTFILE=D:\Franco\Documents\UPB\ED\SpartanHome\SpartanHome.bit
 FAMILY=Spartan3E
 PART=xc3s500e-4fg320
-WORKINGDIR=D:\UPB\8vo Semestre\Electronica Digital\Xilinx\ProyectoFinal\SpartanHome
+WORKINGDIR=D:\Franco\Documents\UPB\ED\SpartanHome
 LICENSE=WebPack
-USER_INFO=211268337_0_0_317
+USER_INFO=211268351_0_0_172

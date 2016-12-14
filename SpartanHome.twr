@@ -37,18 +37,18 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 1497 paths analyzed, 152 endpoints analyzed, 0 failing endpoints
+ 4719 paths analyzed, 425 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   7.573ns.
+ Minimum period is   8.467ns.
 --------------------------------------------------------------------------------
 
-Paths for end point lcd_display/E (SLICE_X22Y88.SR), 239 paths
+Paths for end point lcd_display/E (SLICE_X34Y80.SR), 239 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     12.427ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     11.533ns (requirement - (data path - clock path skew + uncertainty))
   Source:               lcd_display/count_0 (FF)
   Destination:          lcd_display/E (FF)
   Requirement:          20.000ns
-  Data Path Delay:      7.573ns (Levels of Logic = 9)
+  Data Path Delay:      8.467ns (Levels of Logic = 9)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
@@ -58,460 +58,455 @@ Slack (setup path):     12.427ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y80.YQ      Tcko                  0.652   lcd_display/count<1>
+    SLICE_X30Y75.YQ      Tcko                  0.652   lcd_display/count<1>
                                                        lcd_display/count_0
-    SLICE_X21Y81.F2      net (fanout=1)        0.461   lcd_display/count<0>
-    SLICE_X21Y81.COUT    Topcyf                1.162   lcd_display/count_addsub0000<0>
+    SLICE_X31Y75.F2      net (fanout=1)        0.461   lcd_display/count<0>
+    SLICE_X31Y75.COUT    Topcyf                1.162   lcd_display/count_addsub0000<0>
                                                        lcd_display/Madd_count_addsub0000_lut<0>_INV_0
                                                        lcd_display/Madd_count_addsub0000_cy<0>
                                                        lcd_display/Madd_count_addsub0000_cy<1>
-    SLICE_X21Y82.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<1>
-    SLICE_X21Y82.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<2>
+    SLICE_X31Y76.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<1>
+    SLICE_X31Y76.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<2>
                                                        lcd_display/Madd_count_addsub0000_cy<2>
                                                        lcd_display/Madd_count_addsub0000_cy<3>
-    SLICE_X21Y83.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<3>
-    SLICE_X21Y83.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<4>
+    SLICE_X31Y77.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<3>
+    SLICE_X31Y77.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<4>
                                                        lcd_display/Madd_count_addsub0000_cy<4>
                                                        lcd_display/Madd_count_addsub0000_cy<5>
-    SLICE_X21Y84.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<5>
-    SLICE_X21Y84.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<6>
+    SLICE_X31Y78.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<5>
+    SLICE_X31Y78.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<6>
                                                        lcd_display/Madd_count_addsub0000_cy<6>
                                                        lcd_display/Madd_count_addsub0000_cy<7>
-    SLICE_X21Y85.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<7>
-    SLICE_X21Y85.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<8>
+    SLICE_X31Y79.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<7>
+    SLICE_X31Y79.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<8>
                                                        lcd_display/Madd_count_addsub0000_cy<8>
                                                        lcd_display/Madd_count_addsub0000_cy<9>
-    SLICE_X21Y86.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<9>
-    SLICE_X21Y86.Y       Tciny                 0.869   lcd_display/count_addsub0000<10>
+    SLICE_X31Y80.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<9>
+    SLICE_X31Y80.Y       Tciny                 0.869   lcd_display/count_addsub0000<10>
                                                        lcd_display/Madd_count_addsub0000_cy<10>
                                                        lcd_display/Madd_count_addsub0000_xor<11>
-    SLICE_X22Y86.F3      net (fanout=2)        0.326   lcd_display/count_addsub0000<11>
-    SLICE_X22Y86.X       Tilo                  0.759   N15
+    SLICE_X32Y81.F4      net (fanout=2)        0.409   lcd_display/count_addsub0000<11>
+    SLICE_X32Y81.X       Tilo                  0.759   N15
                                                        lcd_display/Mcompar_E_cmp_lt0000_lut<5>_SW0
-    SLICE_X23Y87.G4      net (fanout=1)        0.024   N15
-    SLICE_X23Y87.COUT    Topcyg                1.001   lcd_display/Mcompar_E_cmp_lt0000_cy<5>
+    SLICE_X29Y79.G4      net (fanout=1)        0.615   N15
+    SLICE_X29Y79.COUT    Topcyg                1.001   lcd_display/Mcompar_E_cmp_lt0000_cy<5>
                                                        lcd_display/Mcompar_E_cmp_lt0000_lut<5>
                                                        lcd_display/Mcompar_E_cmp_lt0000_cy<5>
-    SLICE_X23Y88.CIN     net (fanout=1)        0.000   lcd_display/Mcompar_E_cmp_lt0000_cy<5>
-    SLICE_X23Y88.COUT    Tbyp                  0.118   lcd_display/Mcompar_E_cmp_lt0000_cy<7>
+    SLICE_X29Y80.CIN     net (fanout=1)        0.000   lcd_display/Mcompar_E_cmp_lt0000_cy<5>
+    SLICE_X29Y80.COUT    Tbyp                  0.118   lcd_display/Mcompar_E_cmp_lt0000_cy<7>
                                                        lcd_display/Mcompar_E_cmp_lt0000_cy<6>
                                                        lcd_display/Mcompar_E_cmp_lt0000_cy<7>
-    SLICE_X22Y88.SR      net (fanout=1)        0.819   lcd_display/Mcompar_E_cmp_lt0000_cy<7>
-    SLICE_X22Y88.CLK     Tsrck                 0.910   lcd_display/E1
+    SLICE_X34Y80.SR      net (fanout=1)        1.039   lcd_display/Mcompar_E_cmp_lt0000_cy<7>
+    SLICE_X34Y80.CLK     Tsrck                 0.910   lcd_display/E1
                                                        lcd_display/E
     -------------------------------------------------  ---------------------------
-    Total                                      7.573ns (5.943ns logic, 1.630ns route)
-                                                       (78.5% logic, 21.5% route)
+    Total                                      8.467ns (5.943ns logic, 2.524ns route)
+                                                       (70.2% logic, 29.8% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     12.461ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               lcd_display/count_5 (FF)
+Slack (setup path):     11.682ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               lcd_display/count_1 (FF)
   Destination:          lcd_display/E (FF)
   Requirement:          20.000ns
-  Data Path Delay:      7.539ns (Levels of Logic = 6)
+  Data Path Delay:      8.318ns (Levels of Logic = 9)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: lcd_display/count_5 to lcd_display/E
+  Maximum Data Path: lcd_display/count_1 to lcd_display/E
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y84.YQ      Tcko                  0.652   lcd_display/count<16>
-                                                       lcd_display/count_5
-    SLICE_X19Y85.F2      net (fanout=2)        0.522   lcd_display/count<5>
-    SLICE_X19Y85.COUT    Topcyf                1.162   lcd_display/Mcompar_count_cmp_lt0000_cy<1>
-                                                       lcd_display/count<5>_rt.1
-                                                       lcd_display/Mcompar_count_cmp_lt0000_cy<0>
-                                                       lcd_display/Mcompar_count_cmp_lt0000_cy<1>
-    SLICE_X19Y86.CIN     net (fanout=1)        0.000   lcd_display/Mcompar_count_cmp_lt0000_cy<1>
-    SLICE_X19Y86.COUT    Tbyp                  0.118   lcd_display/Mcompar_count_cmp_lt0000_cy<3>
-                                                       lcd_display/Mcompar_count_cmp_lt0000_cy<2>
-                                                       lcd_display/Mcompar_count_cmp_lt0000_cy<3>
-    SLICE_X19Y87.CIN     net (fanout=1)        0.000   lcd_display/Mcompar_count_cmp_lt0000_cy<3>
-    SLICE_X19Y87.COUT    Tbyp                  0.118   lcd_display/Mcompar_count_cmp_lt0000_cy<5>
-                                                       lcd_display/Mcompar_count_cmp_lt0000_cy<4>
-                                                       lcd_display/Mcompar_count_cmp_lt0000_cy<5>
-    SLICE_X19Y88.CIN     net (fanout=1)        0.000   lcd_display/Mcompar_count_cmp_lt0000_cy<5>
-    SLICE_X19Y88.XB      Tcinxb                0.404   lcd_display/Mcompar_count_cmp_lt0000_cy<6>
-                                                       lcd_display/Mcompar_count_cmp_lt0000_cy<6>
-    SLICE_X23Y87.G1      net (fanout=23)       1.715   lcd_display/Mcompar_count_cmp_lt0000_cy<6>
-    SLICE_X23Y87.COUT    Topcyg                1.001   lcd_display/Mcompar_E_cmp_lt0000_cy<5>
+    SLICE_X30Y75.XQ      Tcko                  0.592   lcd_display/count<1>
+                                                       lcd_display/count_1
+    SLICE_X31Y75.G1      net (fanout=1)        0.533   lcd_display/count<1>
+    SLICE_X31Y75.COUT    Topcyg                1.001   lcd_display/count_addsub0000<0>
+                                                       lcd_display/count<1>_rt
+                                                       lcd_display/Madd_count_addsub0000_cy<1>
+    SLICE_X31Y76.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<1>
+    SLICE_X31Y76.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<2>
+                                                       lcd_display/Madd_count_addsub0000_cy<2>
+                                                       lcd_display/Madd_count_addsub0000_cy<3>
+    SLICE_X31Y77.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<3>
+    SLICE_X31Y77.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<4>
+                                                       lcd_display/Madd_count_addsub0000_cy<4>
+                                                       lcd_display/Madd_count_addsub0000_cy<5>
+    SLICE_X31Y78.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<5>
+    SLICE_X31Y78.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<6>
+                                                       lcd_display/Madd_count_addsub0000_cy<6>
+                                                       lcd_display/Madd_count_addsub0000_cy<7>
+    SLICE_X31Y79.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<7>
+    SLICE_X31Y79.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<8>
+                                                       lcd_display/Madd_count_addsub0000_cy<8>
+                                                       lcd_display/Madd_count_addsub0000_cy<9>
+    SLICE_X31Y80.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<9>
+    SLICE_X31Y80.Y       Tciny                 0.869   lcd_display/count_addsub0000<10>
+                                                       lcd_display/Madd_count_addsub0000_cy<10>
+                                                       lcd_display/Madd_count_addsub0000_xor<11>
+    SLICE_X32Y81.F4      net (fanout=2)        0.409   lcd_display/count_addsub0000<11>
+    SLICE_X32Y81.X       Tilo                  0.759   N15
+                                                       lcd_display/Mcompar_E_cmp_lt0000_lut<5>_SW0
+    SLICE_X29Y79.G4      net (fanout=1)        0.615   N15
+    SLICE_X29Y79.COUT    Topcyg                1.001   lcd_display/Mcompar_E_cmp_lt0000_cy<5>
                                                        lcd_display/Mcompar_E_cmp_lt0000_lut<5>
                                                        lcd_display/Mcompar_E_cmp_lt0000_cy<5>
-    SLICE_X23Y88.CIN     net (fanout=1)        0.000   lcd_display/Mcompar_E_cmp_lt0000_cy<5>
-    SLICE_X23Y88.COUT    Tbyp                  0.118   lcd_display/Mcompar_E_cmp_lt0000_cy<7>
+    SLICE_X29Y80.CIN     net (fanout=1)        0.000   lcd_display/Mcompar_E_cmp_lt0000_cy<5>
+    SLICE_X29Y80.COUT    Tbyp                  0.118   lcd_display/Mcompar_E_cmp_lt0000_cy<7>
                                                        lcd_display/Mcompar_E_cmp_lt0000_cy<6>
                                                        lcd_display/Mcompar_E_cmp_lt0000_cy<7>
-    SLICE_X22Y88.SR      net (fanout=1)        0.819   lcd_display/Mcompar_E_cmp_lt0000_cy<7>
-    SLICE_X22Y88.CLK     Tsrck                 0.910   lcd_display/E1
+    SLICE_X34Y80.SR      net (fanout=1)        1.039   lcd_display/Mcompar_E_cmp_lt0000_cy<7>
+    SLICE_X34Y80.CLK     Tsrck                 0.910   lcd_display/E1
                                                        lcd_display/E
     -------------------------------------------------  ---------------------------
-    Total                                      7.539ns (4.483ns logic, 3.056ns route)
-                                                       (59.5% logic, 40.5% route)
+    Total                                      8.318ns (5.722ns logic, 2.596ns route)
+                                                       (68.8% logic, 31.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     12.505ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               lcd_display/count_6 (FF)
+Slack (setup path):     11.748ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               lcd_display/count_2 (FF)
   Destination:          lcd_display/E (FF)
   Requirement:          20.000ns
-  Data Path Delay:      7.495ns (Levels of Logic = 6)
+  Data Path Delay:      8.252ns (Levels of Logic = 8)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: lcd_display/count_6 to lcd_display/E
+  Maximum Data Path: lcd_display/count_2 to lcd_display/E
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y86.XQ      Tcko                  0.591   lcd_display/count<6>
-                                                       lcd_display/count_6
-    SLICE_X19Y85.G4      net (fanout=2)        0.700   lcd_display/count<6>
-    SLICE_X19Y85.COUT    Topcyg                1.001   lcd_display/Mcompar_count_cmp_lt0000_cy<1>
-                                                       lcd_display/Mcompar_count_cmp_lt0000_lut<1>_INV_0
-                                                       lcd_display/Mcompar_count_cmp_lt0000_cy<1>
-    SLICE_X19Y86.CIN     net (fanout=1)        0.000   lcd_display/Mcompar_count_cmp_lt0000_cy<1>
-    SLICE_X19Y86.COUT    Tbyp                  0.118   lcd_display/Mcompar_count_cmp_lt0000_cy<3>
-                                                       lcd_display/Mcompar_count_cmp_lt0000_cy<2>
-                                                       lcd_display/Mcompar_count_cmp_lt0000_cy<3>
-    SLICE_X19Y87.CIN     net (fanout=1)        0.000   lcd_display/Mcompar_count_cmp_lt0000_cy<3>
-    SLICE_X19Y87.COUT    Tbyp                  0.118   lcd_display/Mcompar_count_cmp_lt0000_cy<5>
-                                                       lcd_display/Mcompar_count_cmp_lt0000_cy<4>
-                                                       lcd_display/Mcompar_count_cmp_lt0000_cy<5>
-    SLICE_X19Y88.CIN     net (fanout=1)        0.000   lcd_display/Mcompar_count_cmp_lt0000_cy<5>
-    SLICE_X19Y88.XB      Tcinxb                0.404   lcd_display/Mcompar_count_cmp_lt0000_cy<6>
-                                                       lcd_display/Mcompar_count_cmp_lt0000_cy<6>
-    SLICE_X23Y87.G1      net (fanout=23)       1.715   lcd_display/Mcompar_count_cmp_lt0000_cy<6>
-    SLICE_X23Y87.COUT    Topcyg                1.001   lcd_display/Mcompar_E_cmp_lt0000_cy<5>
+    SLICE_X30Y76.YQ      Tcko                  0.652   lcd_display/count<3>
+                                                       lcd_display/count_2
+    SLICE_X31Y76.F4      net (fanout=1)        0.364   lcd_display/count<2>
+    SLICE_X31Y76.COUT    Topcyf                1.162   lcd_display/count_addsub0000<2>
+                                                       lcd_display/count<2>_rt
+                                                       lcd_display/Madd_count_addsub0000_cy<2>
+                                                       lcd_display/Madd_count_addsub0000_cy<3>
+    SLICE_X31Y77.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<3>
+    SLICE_X31Y77.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<4>
+                                                       lcd_display/Madd_count_addsub0000_cy<4>
+                                                       lcd_display/Madd_count_addsub0000_cy<5>
+    SLICE_X31Y78.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<5>
+    SLICE_X31Y78.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<6>
+                                                       lcd_display/Madd_count_addsub0000_cy<6>
+                                                       lcd_display/Madd_count_addsub0000_cy<7>
+    SLICE_X31Y79.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<7>
+    SLICE_X31Y79.COUT    Tbyp                  0.118   lcd_display/count_addsub0000<8>
+                                                       lcd_display/Madd_count_addsub0000_cy<8>
+                                                       lcd_display/Madd_count_addsub0000_cy<9>
+    SLICE_X31Y80.CIN     net (fanout=1)        0.000   lcd_display/Madd_count_addsub0000_cy<9>
+    SLICE_X31Y80.Y       Tciny                 0.869   lcd_display/count_addsub0000<10>
+                                                       lcd_display/Madd_count_addsub0000_cy<10>
+                                                       lcd_display/Madd_count_addsub0000_xor<11>
+    SLICE_X32Y81.F4      net (fanout=2)        0.409   lcd_display/count_addsub0000<11>
+    SLICE_X32Y81.X       Tilo                  0.759   N15
+                                                       lcd_display/Mcompar_E_cmp_lt0000_lut<5>_SW0
+    SLICE_X29Y79.G4      net (fanout=1)        0.615   N15
+    SLICE_X29Y79.COUT    Topcyg                1.001   lcd_display/Mcompar_E_cmp_lt0000_cy<5>
                                                        lcd_display/Mcompar_E_cmp_lt0000_lut<5>
                                                        lcd_display/Mcompar_E_cmp_lt0000_cy<5>
-    SLICE_X23Y88.CIN     net (fanout=1)        0.000   lcd_display/Mcompar_E_cmp_lt0000_cy<5>
-    SLICE_X23Y88.COUT    Tbyp                  0.118   lcd_display/Mcompar_E_cmp_lt0000_cy<7>
+    SLICE_X29Y80.CIN     net (fanout=1)        0.000   lcd_display/Mcompar_E_cmp_lt0000_cy<5>
+    SLICE_X29Y80.COUT    Tbyp                  0.118   lcd_display/Mcompar_E_cmp_lt0000_cy<7>
                                                        lcd_display/Mcompar_E_cmp_lt0000_cy<6>
                                                        lcd_display/Mcompar_E_cmp_lt0000_cy<7>
-    SLICE_X22Y88.SR      net (fanout=1)        0.819   lcd_display/Mcompar_E_cmp_lt0000_cy<7>
-    SLICE_X22Y88.CLK     Tsrck                 0.910   lcd_display/E1
+    SLICE_X34Y80.SR      net (fanout=1)        1.039   lcd_display/Mcompar_E_cmp_lt0000_cy<7>
+    SLICE_X34Y80.CLK     Tsrck                 0.910   lcd_display/E1
                                                        lcd_display/E
     -------------------------------------------------  ---------------------------
-    Total                                      7.495ns (4.261ns logic, 3.234ns route)
-                                                       (56.9% logic, 43.1% route)
+    Total                                      8.252ns (5.825ns logic, 2.427ns route)
+                                                       (70.6% logic, 29.4% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point timer_ctrl/divider_1hz/clkout (SLICE_X31Y40.SR), 19 paths
+Paths for end point lcd_display/divider_1hz/clkout (SLICE_X40Y37.SR), 20 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     13.738ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               timer_ctrl/divider_1hz/count_3 (FF)
+Slack (setup path):     13.537ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               lcd_display/divider_1hz/count_9 (FF)
+  Destination:          lcd_display/divider_1hz/clkout (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.450ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.013ns (0.108 - 0.121)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: lcd_display/divider_1hz/count_9 to lcd_display/divider_1hz/clkout
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y39.YQ      Tcko                  0.587   lcd_display/divider_1hz/count<8>
+                                                       lcd_display/divider_1hz/count_9
+    SLICE_X31Y41.G1      net (fanout=3)        1.375   lcd_display/divider_1hz/count<9>
+    SLICE_X31Y41.COUT    Topcyg                1.001   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<1>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_lut<1>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<1>_0
+    SLICE_X31Y42.CIN     net (fanout=1)        0.000   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<1>1
+    SLICE_X31Y42.COUT    Tbyp                  0.118   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<3>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<2>_0
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<3>_0
+    SLICE_X31Y43.CIN     net (fanout=1)        0.000   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<3>1
+    SLICE_X31Y43.COUT    Tbyp                  0.118   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<5>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<4>_0
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<5>_0
+    SLICE_X31Y44.CIN     net (fanout=1)        0.000   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<5>1
+    SLICE_X31Y44.COUT    Tbyp                  0.118   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<7>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<6>_0
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<7>_0
+    SLICE_X31Y45.CIN     net (fanout=1)        0.000   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<7>1
+    SLICE_X31Y45.COUT    Tbyp                  0.118   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<9>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<8>_0
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<9>_0
+    SLICE_X31Y46.CIN     net (fanout=1)        0.000   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<9>1
+    SLICE_X31Y46.XB      Tcinxb                0.404   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<10>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<10>_0
+    SLICE_X40Y37.SR      net (fanout=1)        1.701   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<10>1
+    SLICE_X40Y37.CLK     Tsrck                 0.910   lcd_display/divider_1hz/clkout
+                                                       lcd_display/divider_1hz/clkout
+    -------------------------------------------------  ---------------------------
+    Total                                      6.450ns (3.374ns logic, 3.076ns route)
+                                                       (52.3% logic, 47.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.923ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               lcd_display/divider_1hz/count_11 (FF)
+  Destination:          lcd_display/divider_1hz/clkout (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.063ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.014ns (0.108 - 0.122)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: lcd_display/divider_1hz/count_11 to lcd_display/divider_1hz/clkout
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y40.YQ      Tcko                  0.587   lcd_display/divider_1hz/count<10>
+                                                       lcd_display/divider_1hz/count_11
+    SLICE_X31Y42.F4      net (fanout=3)        0.945   lcd_display/divider_1hz/count<11>
+    SLICE_X31Y42.COUT    Topcyf                1.162   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<3>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_lut<2>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<2>_0
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<3>_0
+    SLICE_X31Y43.CIN     net (fanout=1)        0.000   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<3>1
+    SLICE_X31Y43.COUT    Tbyp                  0.118   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<5>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<4>_0
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<5>_0
+    SLICE_X31Y44.CIN     net (fanout=1)        0.000   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<5>1
+    SLICE_X31Y44.COUT    Tbyp                  0.118   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<7>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<6>_0
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<7>_0
+    SLICE_X31Y45.CIN     net (fanout=1)        0.000   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<7>1
+    SLICE_X31Y45.COUT    Tbyp                  0.118   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<9>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<8>_0
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<9>_0
+    SLICE_X31Y46.CIN     net (fanout=1)        0.000   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<9>1
+    SLICE_X31Y46.XB      Tcinxb                0.404   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<10>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<10>_0
+    SLICE_X40Y37.SR      net (fanout=1)        1.701   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<10>1
+    SLICE_X40Y37.CLK     Tsrck                 0.910   lcd_display/divider_1hz/clkout
+                                                       lcd_display/divider_1hz/clkout
+    -------------------------------------------------  ---------------------------
+    Total                                      6.063ns (3.417ns logic, 2.646ns route)
+                                                       (56.4% logic, 43.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.011ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               lcd_display/divider_1hz/count_6 (FF)
+  Destination:          lcd_display/divider_1hz/clkout (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.976ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.013ns (0.108 - 0.121)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: lcd_display/divider_1hz/count_6 to lcd_display/divider_1hz/clkout
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y38.XQ      Tcko                  0.591   lcd_display/divider_1hz/count<6>
+                                                       lcd_display/divider_1hz/count_6
+    SLICE_X31Y41.F3      net (fanout=3)        0.736   lcd_display/divider_1hz/count<6>
+    SLICE_X31Y41.COUT    Topcyf                1.162   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<1>1
+                                                       lcd_display/divider_1hz/count<6>_rt.1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<0>_0
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<1>_0
+    SLICE_X31Y42.CIN     net (fanout=1)        0.000   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<1>1
+    SLICE_X31Y42.COUT    Tbyp                  0.118   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<3>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<2>_0
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<3>_0
+    SLICE_X31Y43.CIN     net (fanout=1)        0.000   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<3>1
+    SLICE_X31Y43.COUT    Tbyp                  0.118   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<5>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<4>_0
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<5>_0
+    SLICE_X31Y44.CIN     net (fanout=1)        0.000   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<5>1
+    SLICE_X31Y44.COUT    Tbyp                  0.118   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<7>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<6>_0
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<7>_0
+    SLICE_X31Y45.CIN     net (fanout=1)        0.000   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<7>1
+    SLICE_X31Y45.COUT    Tbyp                  0.118   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<9>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<8>_0
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<9>_0
+    SLICE_X31Y46.CIN     net (fanout=1)        0.000   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<9>1
+    SLICE_X31Y46.XB      Tcinxb                0.404   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<10>1
+                                                       lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<10>_0
+    SLICE_X40Y37.SR      net (fanout=1)        1.701   lcd_display/divider_1hz/Mcompar_count_cmp_lt0000_cy<10>1
+    SLICE_X40Y37.CLK     Tsrck                 0.910   lcd_display/divider_1hz/clkout
+                                                       lcd_display/divider_1hz/clkout
+    -------------------------------------------------  ---------------------------
+    Total                                      5.976ns (3.539ns logic, 2.437ns route)
+                                                       (59.2% logic, 40.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point timer_ctrl/divider_1hz/clkout (SLICE_X36Y68.SR), 20 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.564ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               timer_ctrl/divider_1hz/count_12 (FF)
   Destination:          timer_ctrl/divider_1hz/clkout (FF)
   Requirement:          20.000ns
-  Data Path Delay:      6.262ns (Levels of Logic = 5)
+  Data Path Delay:      6.436ns (Levels of Logic = 5)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: timer_ctrl/divider_1hz/count_3 to timer_ctrl/divider_1hz/clkout
+  Maximum Data Path: timer_ctrl/divider_1hz/count_12 to timer_ctrl/divider_1hz/clkout
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y49.YQ      Tcko                  0.587   timer_ctrl/divider_1hz/count<2>
-                                                       timer_ctrl/divider_1hz/count_3
-    SLICE_X21Y52.F1      net (fanout=3)        1.128   timer_ctrl/divider_1hz/count<3>
-    SLICE_X21Y52.COUT    Topcyf                1.162   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<3>
+    SLICE_X21Y77.XQ      Tcko                  0.591   timer_ctrl/divider_1hz/count<12>
+                                                       timer_ctrl/divider_1hz/count_12
+    SLICE_X25Y76.F1      net (fanout=3)        1.174   timer_ctrl/divider_1hz/count<12>
+    SLICE_X25Y76.COUT    Topcyf                1.162   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<3>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_lut<2>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<2>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<3>
-    SLICE_X21Y53.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<3>
-    SLICE_X21Y53.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
+    SLICE_X25Y77.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<3>
+    SLICE_X25Y77.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<4>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
-    SLICE_X21Y54.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
-    SLICE_X21Y54.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
+    SLICE_X25Y78.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
+    SLICE_X25Y78.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<6>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
-    SLICE_X21Y55.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
-    SLICE_X21Y55.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
+    SLICE_X25Y79.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
+    SLICE_X25Y79.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<8>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
-    SLICE_X21Y56.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
-    SLICE_X21Y56.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<11>
+    SLICE_X25Y80.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
+    SLICE_X25Y80.XB      Tcinxb                0.404   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<10>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<10>
-                                                       timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<11>
-    SLICE_X31Y40.SR      net (fanout=1)        2.003   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<11>
-    SLICE_X31Y40.CLK     Tsrck                 0.910   timer_ctrl/divider_1hz/clkout
+    SLICE_X36Y68.SR      net (fanout=1)        1.841   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<10>
+    SLICE_X36Y68.CLK     Tsrck                 0.910   timer_ctrl/divider_1hz/clkout
                                                        timer_ctrl/divider_1hz/clkout
     -------------------------------------------------  ---------------------------
-    Total                                      6.262ns (3.131ns logic, 3.131ns route)
-                                                       (50.0% logic, 50.0% route)
+    Total                                      6.436ns (3.421ns logic, 3.015ns route)
+                                                       (53.2% logic, 46.8% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     13.846ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               timer_ctrl/divider_1hz/count_5 (FF)
+Slack (setup path):     13.653ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               timer_ctrl/divider_1hz/count_13 (FF)
   Destination:          timer_ctrl/divider_1hz/clkout (FF)
   Requirement:          20.000ns
-  Data Path Delay:      6.154ns (Levels of Logic = 5)
+  Data Path Delay:      6.347ns (Levels of Logic = 5)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: timer_ctrl/divider_1hz/count_5 to timer_ctrl/divider_1hz/clkout
+  Maximum Data Path: timer_ctrl/divider_1hz/count_13 to timer_ctrl/divider_1hz/clkout
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y50.YQ      Tcko                  0.587   timer_ctrl/divider_1hz/count<4>
-                                                       timer_ctrl/divider_1hz/count_5
-    SLICE_X21Y52.G1      net (fanout=3)        1.181   timer_ctrl/divider_1hz/count<5>
-    SLICE_X21Y52.COUT    Topcyg                1.001   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<3>
-                                                       timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_lut<3>
+    SLICE_X21Y77.YQ      Tcko                  0.587   timer_ctrl/divider_1hz/count<12>
+                                                       timer_ctrl/divider_1hz/count_13
+    SLICE_X25Y76.F2      net (fanout=3)        1.089   timer_ctrl/divider_1hz/count<13>
+    SLICE_X25Y76.COUT    Topcyf                1.162   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<3>
+                                                       timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_lut<2>
+                                                       timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<2>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<3>
-    SLICE_X21Y53.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<3>
-    SLICE_X21Y53.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
+    SLICE_X25Y77.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<3>
+    SLICE_X25Y77.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<4>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
-    SLICE_X21Y54.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
-    SLICE_X21Y54.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
+    SLICE_X25Y78.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
+    SLICE_X25Y78.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<6>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
-    SLICE_X21Y55.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
-    SLICE_X21Y55.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
+    SLICE_X25Y79.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
+    SLICE_X25Y79.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<8>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
-    SLICE_X21Y56.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
-    SLICE_X21Y56.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<11>
+    SLICE_X25Y80.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
+    SLICE_X25Y80.XB      Tcinxb                0.404   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<10>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<10>
-                                                       timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<11>
-    SLICE_X31Y40.SR      net (fanout=1)        2.003   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<11>
-    SLICE_X31Y40.CLK     Tsrck                 0.910   timer_ctrl/divider_1hz/clkout
+    SLICE_X36Y68.SR      net (fanout=1)        1.841   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<10>
+    SLICE_X36Y68.CLK     Tsrck                 0.910   timer_ctrl/divider_1hz/clkout
                                                        timer_ctrl/divider_1hz/clkout
     -------------------------------------------------  ---------------------------
-    Total                                      6.154ns (2.970ns logic, 3.184ns route)
-                                                       (48.3% logic, 51.7% route)
+    Total                                      6.347ns (3.417ns logic, 2.930ns route)
+                                                       (53.8% logic, 46.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     13.925ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               timer_ctrl/divider_1hz/count_7 (FF)
+Slack (setup path):     13.721ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               timer_ctrl/divider_1hz/count_11 (FF)
   Destination:          timer_ctrl/divider_1hz/clkout (FF)
   Requirement:          20.000ns
-  Data Path Delay:      6.075ns (Levels of Logic = 4)
+  Data Path Delay:      6.279ns (Levels of Logic = 5)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: timer_ctrl/divider_1hz/count_7 to timer_ctrl/divider_1hz/clkout
+  Maximum Data Path: timer_ctrl/divider_1hz/count_11 to timer_ctrl/divider_1hz/clkout
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y51.YQ      Tcko                  0.587   timer_ctrl/divider_1hz/count<6>
-                                                       timer_ctrl/divider_1hz/count_7
-    SLICE_X21Y53.F2      net (fanout=3)        1.059   timer_ctrl/divider_1hz/count<7>
-    SLICE_X21Y53.COUT    Topcyf                1.162   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
-                                                       timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_lut<4>
+    SLICE_X21Y76.YQ      Tcko                  0.587   timer_ctrl/divider_1hz/count<10>
+                                                       timer_ctrl/divider_1hz/count_11
+    SLICE_X25Y76.F3      net (fanout=3)        1.021   timer_ctrl/divider_1hz/count<11>
+    SLICE_X25Y76.COUT    Topcyf                1.162   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<3>
+                                                       timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_lut<2>
+                                                       timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<2>
+                                                       timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<3>
+    SLICE_X25Y77.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<3>
+    SLICE_X25Y77.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<4>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
-    SLICE_X21Y54.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
-    SLICE_X21Y54.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
+    SLICE_X25Y78.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<5>
+    SLICE_X25Y78.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<6>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
-    SLICE_X21Y55.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
-    SLICE_X21Y55.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
+    SLICE_X25Y79.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<7>
+    SLICE_X25Y79.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<8>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
-    SLICE_X21Y56.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
-    SLICE_X21Y56.COUT    Tbyp                  0.118   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<11>
+    SLICE_X25Y80.CIN     net (fanout=1)        0.000   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<9>
+    SLICE_X25Y80.XB      Tcinxb                0.404   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<10>
                                                        timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<10>
-                                                       timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<11>
-    SLICE_X31Y40.SR      net (fanout=1)        2.003   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<11>
-    SLICE_X31Y40.CLK     Tsrck                 0.910   timer_ctrl/divider_1hz/clkout
+    SLICE_X36Y68.SR      net (fanout=1)        1.841   timer_ctrl/divider_1hz/Mcompar_clkout_cmp_lt0000_cy<10>
+    SLICE_X36Y68.CLK     Tsrck                 0.910   timer_ctrl/divider_1hz/clkout
                                                        timer_ctrl/divider_1hz/clkout
     -------------------------------------------------  ---------------------------
-    Total                                      6.075ns (3.013ns logic, 3.062ns route)
-                                                       (49.6% logic, 50.4% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point timer_ctrl/divider_5000hz/count_12 (SLICE_X29Y48.SR), 14 paths
---------------------------------------------------------------------------------
-Slack (setup path):     14.481ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               timer_ctrl/divider_5000hz/count_1 (FF)
-  Destination:          timer_ctrl/divider_5000hz/count_12 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      5.519ns (Levels of Logic = 3)
-  Clock Path Skew:      0.000ns
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: timer_ctrl/divider_5000hz/count_1 to timer_ctrl/divider_5000hz/count_12
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X29Y42.YQ      Tcko                  0.587   timer_ctrl/divider_5000hz/count<0>
-                                                       timer_ctrl/divider_5000hz/count_1
-    SLICE_X31Y45.F1      net (fanout=2)        1.097   timer_ctrl/divider_5000hz/count<1>
-    SLICE_X31Y45.COUT    Topcyf                1.162   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<1>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_lut<0>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<0>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<1>
-    SLICE_X31Y46.CIN     net (fanout=1)        0.000   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<1>
-    SLICE_X31Y46.COUT    Tbyp                  0.118   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<3>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<2>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<3>
-    SLICE_X31Y47.CIN     net (fanout=1)        0.000   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<3>
-    SLICE_X31Y47.XB      Tcinxb                0.404   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<4>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<4>
-    SLICE_X29Y48.SR      net (fanout=7)        1.241   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<4>
-    SLICE_X29Y48.CLK     Tsrck                 0.910   timer_ctrl/divider_5000hz/count<12>
-                                                       timer_ctrl/divider_5000hz/count_12
-    -------------------------------------------------  ---------------------------
-    Total                                      5.519ns (3.181ns logic, 2.338ns route)
-                                                       (57.6% logic, 42.4% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     14.601ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               timer_ctrl/divider_5000hz/count_0 (FF)
-  Destination:          timer_ctrl/divider_5000hz/count_12 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      5.399ns (Levels of Logic = 3)
-  Clock Path Skew:      0.000ns
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: timer_ctrl/divider_5000hz/count_0 to timer_ctrl/divider_5000hz/count_12
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X29Y42.XQ      Tcko                  0.591   timer_ctrl/divider_5000hz/count<0>
-                                                       timer_ctrl/divider_5000hz/count_0
-    SLICE_X31Y45.F3      net (fanout=2)        0.973   timer_ctrl/divider_5000hz/count<0>
-    SLICE_X31Y45.COUT    Topcyf                1.162   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<1>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_lut<0>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<0>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<1>
-    SLICE_X31Y46.CIN     net (fanout=1)        0.000   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<1>
-    SLICE_X31Y46.COUT    Tbyp                  0.118   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<3>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<2>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<3>
-    SLICE_X31Y47.CIN     net (fanout=1)        0.000   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<3>
-    SLICE_X31Y47.XB      Tcinxb                0.404   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<4>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<4>
-    SLICE_X29Y48.SR      net (fanout=7)        1.241   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<4>
-    SLICE_X29Y48.CLK     Tsrck                 0.910   timer_ctrl/divider_5000hz/count<12>
-                                                       timer_ctrl/divider_5000hz/count_12
-    -------------------------------------------------  ---------------------------
-    Total                                      5.399ns (3.185ns logic, 2.214ns route)
-                                                       (59.0% logic, 41.0% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     14.775ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               timer_ctrl/divider_5000hz/count_3 (FF)
-  Destination:          timer_ctrl/divider_5000hz/count_12 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      5.225ns (Levels of Logic = 3)
-  Clock Path Skew:      0.000ns
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: timer_ctrl/divider_5000hz/count_3 to timer_ctrl/divider_5000hz/count_12
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X29Y43.YQ      Tcko                  0.587   timer_ctrl/divider_5000hz/count<2>
-                                                       timer_ctrl/divider_5000hz/count_3
-    SLICE_X31Y45.F2      net (fanout=3)        0.803   timer_ctrl/divider_5000hz/count<3>
-    SLICE_X31Y45.COUT    Topcyf                1.162   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<1>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_lut<0>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<0>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<1>
-    SLICE_X31Y46.CIN     net (fanout=1)        0.000   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<1>
-    SLICE_X31Y46.COUT    Tbyp                  0.118   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<3>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<2>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<3>
-    SLICE_X31Y47.CIN     net (fanout=1)        0.000   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<3>
-    SLICE_X31Y47.XB      Tcinxb                0.404   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<4>
-                                                       timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<4>
-    SLICE_X29Y48.SR      net (fanout=7)        1.241   timer_ctrl/divider_5000hz/Mcompar_count_cmp_lt0000_cy<4>
-    SLICE_X29Y48.CLK     Tsrck                 0.910   timer_ctrl/divider_5000hz/count<12>
-                                                       timer_ctrl/divider_5000hz/count_12
-    -------------------------------------------------  ---------------------------
-    Total                                      5.225ns (3.181ns logic, 2.044ns route)
-                                                       (60.9% logic, 39.1% route)
+    Total                                      6.279ns (3.417ns logic, 2.862ns route)
+                                                       (54.4% logic, 45.6% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point timer_ctrl/divider_1hz/count_18 (SLICE_X17Y57.F3), 1 path
+Paths for end point timer_ctrl/divider_1hz/count_4 (SLICE_X21Y73.F4), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.599ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               timer_ctrl/divider_1hz/count_18 (FF)
-  Destination:          timer_ctrl/divider_1hz/count_18 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      1.599ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
-  Source Clock:         clk_BUFGP rising at 20.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: timer_ctrl/divider_1hz/count_18 to timer_ctrl/divider_1hz/count_18
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X17Y57.XQ      Tcko                  0.473   timer_ctrl/divider_1hz/count<18>
-                                                       timer_ctrl/divider_1hz/count_18
-    SLICE_X17Y57.F3      net (fanout=3)        0.325   timer_ctrl/divider_1hz/count<18>
-    SLICE_X17Y57.CLK     Tckf        (-Th)    -0.801   timer_ctrl/divider_1hz/count<18>
-                                                       timer_ctrl/divider_1hz/count<18>_rt
-                                                       timer_ctrl/divider_1hz/Mcount_count_xor<18>
-                                                       timer_ctrl/divider_1hz/count_18
-    -------------------------------------------------  ---------------------------
-    Total                                      1.599ns (1.274ns logic, 0.325ns route)
-                                                       (79.7% logic, 20.3% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point timer_ctrl/divider_1hz/count_2 (SLICE_X17Y49.F4), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      1.617ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               timer_ctrl/divider_1hz/count_2 (FF)
-  Destination:          timer_ctrl/divider_1hz/count_2 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      1.617ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
-  Source Clock:         clk_BUFGP rising at 20.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: timer_ctrl/divider_1hz/count_2 to timer_ctrl/divider_1hz/count_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X17Y49.XQ      Tcko                  0.473   timer_ctrl/divider_1hz/count<2>
-                                                       timer_ctrl/divider_1hz/count_2
-    SLICE_X17Y49.F4      net (fanout=3)        0.343   timer_ctrl/divider_1hz/count<2>
-    SLICE_X17Y49.CLK     Tckf        (-Th)    -0.801   timer_ctrl/divider_1hz/count<2>
-                                                       timer_ctrl/divider_1hz/count<2>_rt
-                                                       timer_ctrl/divider_1hz/Mcount_count_xor<2>
-                                                       timer_ctrl/divider_1hz/count_2
-    -------------------------------------------------  ---------------------------
-    Total                                      1.617ns (1.274ns logic, 0.343ns route)
-                                                       (78.8% logic, 21.2% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point timer_ctrl/divider_1hz/count_4 (SLICE_X17Y50.F3), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      1.622ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      1.607ns (requirement - (clock path skew + uncertainty - data path))
   Source:               timer_ctrl/divider_1hz/count_4 (FF)
   Destination:          timer_ctrl/divider_1hz/count_4 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.622ns (Levels of Logic = 1)
+  Data Path Delay:      1.607ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 20.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
@@ -521,16 +516,74 @@ Slack (hold path):      1.622ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y50.XQ      Tcko                  0.473   timer_ctrl/divider_1hz/count<4>
+    SLICE_X21Y73.XQ      Tcko                  0.473   timer_ctrl/divider_1hz/count<4>
                                                        timer_ctrl/divider_1hz/count_4
-    SLICE_X17Y50.F3      net (fanout=3)        0.348   timer_ctrl/divider_1hz/count<4>
-    SLICE_X17Y50.CLK     Tckf        (-Th)    -0.801   timer_ctrl/divider_1hz/count<4>
+    SLICE_X21Y73.F4      net (fanout=2)        0.333   timer_ctrl/divider_1hz/count<4>
+    SLICE_X21Y73.CLK     Tckf        (-Th)    -0.801   timer_ctrl/divider_1hz/count<4>
                                                        timer_ctrl/divider_1hz/count<4>_rt
                                                        timer_ctrl/divider_1hz/Mcount_count_xor<4>
                                                        timer_ctrl/divider_1hz/count_4
     -------------------------------------------------  ---------------------------
-    Total                                      1.622ns (1.274ns logic, 0.348ns route)
-                                                       (78.5% logic, 21.5% route)
+    Total                                      1.607ns (1.274ns logic, 0.333ns route)
+                                                       (79.3% logic, 20.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point timer_ctrl/divider_1hz/count_8 (SLICE_X21Y75.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.607ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               timer_ctrl/divider_1hz/count_8 (FF)
+  Destination:          timer_ctrl/divider_1hz/count_8 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.607ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: timer_ctrl/divider_1hz/count_8 to timer_ctrl/divider_1hz/count_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X21Y75.XQ      Tcko                  0.473   timer_ctrl/divider_1hz/count<8>
+                                                       timer_ctrl/divider_1hz/count_8
+    SLICE_X21Y75.F4      net (fanout=3)        0.333   timer_ctrl/divider_1hz/count<8>
+    SLICE_X21Y75.CLK     Tckf        (-Th)    -0.801   timer_ctrl/divider_1hz/count<8>
+                                                       timer_ctrl/divider_1hz/count<8>_rt
+                                                       timer_ctrl/divider_1hz/Mcount_count_xor<8>
+                                                       timer_ctrl/divider_1hz/count_8
+    -------------------------------------------------  ---------------------------
+    Total                                      1.607ns (1.274ns logic, 0.333ns route)
+                                                       (79.3% logic, 20.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point timer_ctrl/divider_1hz/count_20 (SLICE_X21Y81.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.607ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               timer_ctrl/divider_1hz/count_20 (FF)
+  Destination:          timer_ctrl/divider_1hz/count_20 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.607ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: timer_ctrl/divider_1hz/count_20 to timer_ctrl/divider_1hz/count_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X21Y81.XQ      Tcko                  0.473   timer_ctrl/divider_1hz/count<20>
+                                                       timer_ctrl/divider_1hz/count_20
+    SLICE_X21Y81.F4      net (fanout=3)        0.333   timer_ctrl/divider_1hz/count<20>
+    SLICE_X21Y81.CLK     Tckf        (-Th)    -0.801   timer_ctrl/divider_1hz/count<20>
+                                                       timer_ctrl/divider_1hz/count<20>_rt
+                                                       timer_ctrl/divider_1hz/Mcount_count_xor<20>
+                                                       timer_ctrl/divider_1hz/count_20
+    -------------------------------------------------  ---------------------------
+    Total                                      1.607ns (1.274ns logic, 0.333ns route)
+                                                       (79.3% logic, 20.7% route)
 
 --------------------------------------------------------------------------------
 
@@ -540,26 +593,26 @@ Slack: 18.348ns (period - (min low pulse limit / (low pulse / period)))
   Period: 20.000ns
   Low pulse: 10.000ns
   Low pulse limit: 0.826ns (Tcl)
-  Physical resource: lcd_display/count<1>/CLK
-  Logical resource: lcd_display/count_1/CK
-  Location pin: SLICE_X20Y80.CLK
+  Physical resource: divider_beep/count<0>/CLK
+  Logical resource: divider_beep/count_0/CK
+  Location pin: SLICE_X0Y54.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 18.348ns (period - (min high pulse limit / (high pulse / period)))
   Period: 20.000ns
   High pulse: 10.000ns
   High pulse limit: 0.826ns (Tch)
-  Physical resource: lcd_display/count<1>/CLK
-  Logical resource: lcd_display/count_1/CK
-  Location pin: SLICE_X20Y80.CLK
+  Physical resource: divider_beep/count<0>/CLK
+  Logical resource: divider_beep/count_0/CK
+  Location pin: SLICE_X0Y54.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 18.348ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 1.652ns (605.327MHz) (Tcp)
-  Physical resource: lcd_display/count<1>/CLK
-  Logical resource: lcd_display/count_1/CK
-  Location pin: SLICE_X20Y80.CLK
+  Physical resource: divider_beep/count<0>/CLK
+  Logical resource: divider_beep/count_0/CK
+  Location pin: SLICE_X0Y54.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -576,7 +629,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    7.573|         |         |         |
+clk            |    8.467|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -585,16 +638,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 1497 paths, 0 nets, and 271 connections
+Constraints cover 4719 paths, 0 nets, and 641 connections
 
 Design statistics:
-   Minimum period:   7.573ns{1}   (Maximum frequency: 132.048MHz)
+   Minimum period:   8.467ns{1}   (Maximum frequency: 118.106MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue Dec 13 11:54:49 2016 
+Analysis completed Wed Dec 14 10:42:15 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

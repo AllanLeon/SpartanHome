@@ -40,6 +40,12 @@ entity CtrlLogic is
 end CtrlLogic;
 
 architecture Behavioral of CtrlLogic is
+	component FrequencyDivider_1hz is
+    Port ( clk : in  STD_LOGIC;
+           clkout : out  STD_LOGIC);
+	end component;
+
+
 	type states is (FI1A,FI1B,FI2A,FI2B,FI3A,FI3B,BOR1,BOR2,CONT1,CONT2,MOD1,MOD2,
 						 sp1_row,sp1_col,sp2_row,sp2_col,sp3_row,sp3_col,sp4_row,sp4_col,sp5_row,sp5_col,
 						 hour1_row,hour1_col,hour2_row,hour2_col,colon1_row,colon1_col,
@@ -55,6 +61,8 @@ architecture Behavioral of CtrlLogic is
 	signal tmpLights, tmpAlarm, tmpMusic : std_logic;
 	signal selHr1_row, selHr1_col, selHr2_row, selHr2_col : std_logic_vector(3 downto 0) := "0000";
 	signal selMn1_row, selMn1_col, selMn2_row, selMn2_col : std_logic_vector(3 downto 0) := "0000";
+	signal colon_blink, clk_1hz: STD_LOGIC := '0';
+	signal colontmp_row, colontmp_col: STD_LOGIC_VECTOR (3 downto 0);
 
 begin
 	SF_CE0 <='1';
@@ -244,7 +252,7 @@ begin
 	end process SEC_machine;
 
 	COMB_machine: process (pr_status, selHr1_row, selHr1_col, selHr2_row, selHr2_col, selMn1_row, selMn1_col,
-						selMn2_row, selMn2_col, tmpLights, tmpAlarm, tmpMusic) --- PARTE COMBINATORIA DE LA MAQUINA DE ESTADOS
+						selMn2_row, selMn2_col, tmpLights, tmpAlarm, tmpMusic, clk) --- PARTE COMBINATORIA DE LA MAQUINA DE ESTADOS
 	begin
 		case pr_status is
 			when FI1A =>      ----- INICIO código $28 SELECCIÓM DEL BUS DE 4 BITS 
@@ -351,13 +359,15 @@ begin
 				RS <='1'; RW<='0';
 				DB <= selHr2_col;		----- FIN código $XX SEGUNDO DIGITO HORA
 				nx_status <= colon1_row;
+				
+			--Print ":"
 			when colon1_row =>		----- INICIO código $3A ESCRIBE EL CARACTER ":"
 				RS <='1'; RW<='0';
-				DB <="0011";
+				DB <= colontmp_row;
 				nx_status <= colon1_col;
 			when colon1_col =>
 				RS <='1'; RW<='0';
-				DB <="1010";		----- FIN código $3A ESCRIBE EL CARACTER ":"
+				DB <= colontmp_col;		----- FIN código $3A ESCRIBE EL CARACTER ":"
 				nx_status <= min1_row;
 			when min1_row =>		----- INICIO código $XX PRIMER DIGITO MINUTO
 				RS <='1'; RW<='0';
@@ -666,5 +676,18 @@ begin
 				nx_status <= sp1_row;
 		end case;
 	end process COMB_machine;
+	
+	process (clk_1hz) begin
+		case clk_1hz is
+			when '1' =>
+				colontmp_row <= "0011";
+				colontmp_col <= "1010";
+			when others =>
+				colontmp_row <= "0010";
+				colontmp_col <= "0000";
+		end case;
+	end process;
+	
+	divider_1hz: FrequencyDivider_1hz port map (clk, clk_1hz);
 
 end Behavioral;

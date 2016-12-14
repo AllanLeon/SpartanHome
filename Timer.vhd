@@ -104,7 +104,7 @@ architecture Behavioral of Timer is
 
 begin
 
-	process (s0_tmp) begin
+	process (s0_tmp, f1_s) begin
 		if (not ((s0_tmp xor f1_s) = "0000") and s0_tmp = "0000") then
 			s1_pulse <= '1';
 		else 
@@ -112,7 +112,7 @@ begin
 		end if;
 	end process;
 	
-	process (m0_tmp) begin
+	process (m0_tmp, f1_m) begin
 		if (not ((m0_tmp xor f1_m) = "0000") and m0_tmp = "0000") then
 			m1_pulse <= '1';
 		else 
@@ -120,7 +120,7 @@ begin
 		end if;
 	end process;
 	
-	process (clk_5000hz, rst) begin
+	process (clk_5000hz, rst, s0_tmp, f1_s, m0_tmp, f1_m) begin
 		vector_change(clk_5000hz, rst, s0_tmp, f1_s);
 		vector_change(clk_5000hz, rst, m0_tmp, f1_m);
 	end process;

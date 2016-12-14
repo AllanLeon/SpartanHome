@@ -46,6 +46,31 @@ end SpartanHome;
 
 architecture Behavioral of SpartanHome is
 
+component FrequencyDivider_10Hz is
+		Port ( clk : in  STD_LOGIC;
+           clkout : out  STD_LOGIC);
+end component;
+
+component FrequencyDivider_5hz is
+		Port ( clk : in  STD_LOGIC;
+           clkout : out  STD_LOGIC);
+end component;
+
+component NoiseFilter is
+		Port ( pbsync : in  STD_LOGIC;
+           clk : in  STD_LOGIC;
+           rst : in  STD_LOGIC;
+           pulse : out  STD_LOGIC);
+end component;
+
+component BeepCtrl is
+		Port ( clk : in  STD_LOGIC;
+           rst : in  STD_LOGIC;
+			  d : in STD_LOGIC;
+           beep : out  STD_LOGIC);
+end component;
+
+
 component CtrlLogic is
 		Port ( H1 : in  STD_LOGIC_VECTOR (3 downto 0);
            H2 : in  STD_LOGIC_VECTOR (3 downto 0);
@@ -75,15 +100,17 @@ component Timer is
 end component;
 
 signal h1, h0, m1, m0: STD_LOGIC_VECTOR (3 downto 0);
-signal m_pulse, h_pulse, clk_10hz: STD_LOGIC;
+signal m_pulse, h_pulse, clk_10hz, clk_5hz, alarm_tmp: STD_LOGIC;
 
 begin
 	
 	divider_button: FrequencyDivider_10Hz port map (clk, clk_10hz);
+	divider_beep: FrequencyDivider_5hz port map (clk, clk_5hz);
 	filter_minutes: NoiseFilter port map (M, clk_10hz, rst, m_pulse);
 	filter_hours: NoiseFilter port map (H, clk_10hz, rst, h_pulse);
-	lcd_display: CtrlLogic port map (h1, h0, m1, m0, clk, rst, E, RS, RW, SF_CE0, DB, alarm, lights, music);
+	lcd_display: CtrlLogic port map (h1, h0, m1, m0, clk, rst, E, RS, RW, SF_CE0, DB, alarm_tmp, lights, music);
 	timer_ctrl: Timer port map (clk, rst, m_pulse, h_pulse, h1, h0, m1, m0);
+	beeper: BeepCtrl port map (clk_5hz, rst, alarm_tmp, alarm);
 
 end Behavioral;
 
